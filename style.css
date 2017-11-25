@@ -1,0 +1,56 @@
+/*
+ Theme Name:   Astronaut Rhea Seddon
+ Theme URI:
+ Description:  Evolution Child Theme
+ Author: Dan Brown
+ Author URI: daniel.thesplitpixel.com
+ Template:     Evolution
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ GitHub Theme URI: https://github.com/warofthesun/rheaseddon
+ Text Domain:  Evolution-child
+*/
+
+.product_title {
+	font-family: georgia, serif !important;
+	font-size: 28px;
+    color: #2b2b2b;
+    margin-top: -10px;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+.woo h2, .woo h4,.woo .page-title, .woocommerce ul.products li.product h3 {
+	font-family: Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+.woocommerce ul.products li.product h3 {
+	font-size: 1.5em !important;
+}
+
+.woocommerce-page div.product div.summary {
+	width: 58% !important;
+}
+
+.woocommerce-page div.product div.images {
+	width: 38% !important;
+}
+
+.woo-product-area {
+	padding-top: 15px;
+	padding-right: 10px;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
+	color: #c18ed3 !important;
+}
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
+	display: none;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	width: 35% !important;
+}
