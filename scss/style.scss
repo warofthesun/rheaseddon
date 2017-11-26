@@ -1,0 +1,39 @@
+/*
+ Theme Name:   Astronaut Rhea Seddon
+ Theme URI:
+ Description:  Evolution Child Theme
+ Author: Dan Brown
+ Author URI: daniel.thesplitpixel.com
+ Template:     Evolution
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ GitHub Theme URI: https://github.com/warofthesun/rheaseddon
+ Text Domain:  Evolution-child
+*/
+
+@import "variables";
+
+@import "structure";
+
+@import "woocommerce";
+
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/768up";
+
+} // end of media query
+
+@media only screen and (min-width: 1280px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/1280up";
+
+} // end of media query
+
+@media only screen and (min-width: 1440px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/1440up";
+
+} // end of media query

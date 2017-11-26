@@ -1,0 +1,56 @@
+.product_title, .woo h2 {
+	font-family: $sans-serif !important;
+	font-size: 28px;
+    color: $dark-color;
+    padding-bottom: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: .3em;
+}
+
+.woocommerce-Price-amount {
+    color: $dark-accent !important;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.woocommerce-product-details__short-description {
+    font-weight: 400;
+    font-style: normal !important;
+    letter-spacing: .1em;
+}
+
+.woo h4,.woo .page-title, .woocommerce ul.products li.product h3 {
+	font-family: $sans-serif !important;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+.woocommerce ul.products li.product h3 {
+	font-size: 1.5em !important;
+}
+
+.woocommerce-page div.product div.summary {
+	width: 58% !important;
+}
+
+.woocommerce-page div.product div.images {
+	width: 38% !important;
+}
+
+.woo-product-area {
+	padding-top: 15px;
+	padding-right: 10px;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
+	color: $accent !important;
+}
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
+	display: none;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	width: 35% !important;
+}

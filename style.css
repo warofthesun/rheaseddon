@@ -10,47 +10,84 @@
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
 */
+#navigation {
+  border-top: 0px !important; }
+  #navigation #top-menu-shadow {
+    display: none !important; }
+  #navigation #top-menu > ul > li.current-menu-item > a {
+    color: #00CCFF !important;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100; }
 
-.product_title {
-	font-family: georgia, serif !important;
-	font-size: 28px;
-    color: #2b2b2b;
-    margin-top: -10px;
-    font-style: italic;
-    padding-bottom: 20px;
-}
+.sf-with-ul .sf-sub-indicator {
+  display: none; }
+.sf-with-ul::after {
+  content: "\f0d7";
+  font-family: 'fontawesome';
+  display: block;
+  text-align: center;
+  margin-top: -.5em;
+  color: #00CCFF; }
 
-.woo h2, .woo h4,.woo .page-title, .woocommerce ul.products li.product h3 {
-	font-family: Georgia, serif;
-    font-style: italic;
-    letter-spacing: 0;
-}
+#footer-widgets {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.product_title, .woo h2 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 28px;
+  color: #A0A0A0;
+  padding-bottom: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-bottom: .3em; }
+
+.woocommerce-Price-amount {
+  color: #00a3cc !important;
+  font-style: italic;
+  font-weight: 600; }
+
+.woocommerce-product-details__short-description {
+  font-weight: 400;
+  font-style: normal !important;
+  letter-spacing: .1em; }
+
+.woo h4, .woo .page-title, .woocommerce ul.products li.product h3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-style: italic;
+  letter-spacing: 0; }
 
 .woocommerce ul.products li.product h3 {
-	font-size: 1.5em !important;
-}
+  font-size: 1.5em !important; }
 
 .woocommerce-page div.product div.summary {
-	width: 58% !important;
-}
+  width: 58% !important; }
 
 .woocommerce-page div.product div.images {
-	width: 38% !important;
-}
+  width: 38% !important; }
 
 .woo-product-area {
-	padding-top: 15px;
-	padding-right: 10px;
-}
+  padding-top: 15px;
+  padding-right: 10px; }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
-	color: #c18ed3 !important;
-}
+  color: #00CCFF !important; }
 
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
-	display: none;
-}
+  display: none; }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-	width: 35% !important;
-}
+  width: 35% !important; }
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 1280px !important; }
+
+  .header_logo {
+    float: left; }
+
+  #top-menu {
+    float: right !important; } }
+
+/*# sourceMappingURL=style.css.map */
