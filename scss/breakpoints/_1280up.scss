@@ -1,5 +1,31 @@
+#main {
+    .container {
+        width: 1200px !important;
+    }
+}
+
 .container {
-    width: 1280px !important;
+    width: 1020px !important;
+}
+
+.home {
+    #main-area {
+        max-width: 1200px !important;
+        margin: 0 auto;
+    }
+
+    #content_area {
+        max-width: 1200px !important;
+    }
+}
+
+#main-area {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+#content_area {
+    max-width: 1020px;
 }
 
 .header_logo {

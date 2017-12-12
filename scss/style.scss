@@ -11,6 +11,8 @@
  Text Domain:  Evolution-child
 */
 
+@import "grid";
+
 @import "variables";
 
 @import "structure";
@@ -21,6 +23,8 @@
 
 	// styles in 768up.scss
 	@import "breakpoints/768up";
+
+	@import "search";
 
 } // end of media query
 

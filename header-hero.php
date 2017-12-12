@@ -33,16 +33,14 @@
 		document.documentElement.className = 'js';
 	</script>
 
-
 	<?php wp_head(); ?>
-	
 </head>
 <body <?php body_class(); ?>>
 	<div id="page-wrap">
 		<header id="main">
 			<div class="container top-info">
 				<div class="header_logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<a href="<?php echo home_url(); ?>">
 						<?php $logo = (get_option('evolution_logo') <> '') ? esc_attr(get_option('evolution_logo')) : get_template_directory_uri() . '/images/logo.png'; ?>
 						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" id="logo"/>
 					</a>
@@ -88,15 +86,11 @@
 					<a href="#" id="mobile_nav" class="closed"><?php esc_html_e( 'Navigation', 'Evolution' ); ?><span></span></a>
 
 
-
+					<div id="top-menu-shadow"></div>
 					<div id="bottom-menu-shadow"></div>
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
-		<?php if( get_field('test_text') ): ?>
-
-			<div style="background-color:red;height:200px;"><?php the_field('test_text'); ?></div>
-
-		<?php endif; ?>
+		<div class="hero_image">Header with full width imagery showing Dr Seddon in action (speaking to an audience, signing books, shaking hands, etc) with a single call to action of  “Learn more about hosting Rhea to speak”</div>
 		<div id="main-area">
 			<div class="container">

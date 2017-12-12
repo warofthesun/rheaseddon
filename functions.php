@@ -5,6 +5,7 @@ function my_theme_enqueue_styles() {
 
 }
 
+
 /*remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
@@ -19,6 +20,16 @@ function my_theme_wrapper_end() {
   echo '</div>';
 }*/
 
+//image sizes
+add_image_size( 'article-thumb', 964, 723, true ); //(cropped)
+
+// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
+//  require_once( 'library/custom-post-type.php' );
+
+  function insert_jquery(){
+  wp_enqueue_script('jquery', false, array(), false, false);
+  }
+  add_filter('wp_enqueue_scripts','insert_jquery',1);
 
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
@@ -33,4 +44,5 @@ function enqueue_load_fa() {
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+
 ?>

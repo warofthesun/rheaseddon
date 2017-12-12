@@ -1,0 +1,29 @@
+#search-form {
+    width: 30px;
+    -webkit-transition: all .2s; /* Safari */
+    transition: all .2s;
+
+    #searchinput {
+        opacity: 0;
+        -webkit-transition: opacity .2s; /* Safari */
+        transition: opacity .2s;
+        overflow: hidden;
+    }
+
+    #searchsubmit {
+        margin-top: 11px;
+        margin-left: 8px;
+        position: absolute;
+    }
+
+    &:hover, &:active, &:focus {
+        width: 175px;
+
+        #searchinput {
+            opacity: 1;
+            margin-left: 2em;
+            width: 130px !important;
+            overflow: hidden;
+        }
+    }
+}

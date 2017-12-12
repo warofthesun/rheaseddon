@@ -1,7 +1,26 @@
+// Header
+#main {
+    padding-top: 0px !important;
+
+    img#logo {
+        height: 100px;
+    }
+}
+
 // Navigation
+
+a#mobile_nav {
+    background: transparent !important;
+    border: 0px !important;
+
+    span {
+        display: none !important;
+    }
+}
 
 #navigation {
     border-top: 0px !important;
+    border-bottom: 0px !important;
 
     #top-menu-shadow {
         display: none !important;
@@ -15,7 +34,15 @@
     }
 }
 
-.sf-with-ul {
+#search-form {
+    margin-right: 10px !important;
+}
+
+#bottom-menu-shadow {
+    background-position-x: center !important;
+}
+
+.sf-with-ul, #mobile_nav {
         .sf-sub-indicator {
             display: none;
         }
@@ -27,6 +54,128 @@
         text-align: center;
         margin-top: -.5em;
         color: $accent;
+    }
+}
+
+#mobile_nav {
+    &.opened::after {
+        content: "\f0d8";
+        font-family: 'fontawesome';
+    }
+}
+
+// Body
+
+.home {
+    #main-area {
+        padding-top: 0px !important;
+    }
+
+    #content_area {
+        border-top: 0px !important;
+    }
+
+    .entry {
+        border-bottom: 0px;
+    }
+}
+
+.section_title {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+
+    span {
+        border-bottom: 2px solid $accent;
+        padding-bottom: .7em;
+        display: block;
+        width: 330px;
+        margin: 0 auto;
+
+        &.light {
+            color: $med-color;
+        }
+    }
+}
+
+.about_dr_seddon {
+    margin-top: 15em;
+
+    .article_content {
+        display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: flex;
+    	-ms-flex-align: center;
+    	-webkit-align-items: center;
+    	-webkit-box-align: center;
+    	align-items: center;
+        height: 360px;
+    }
+}
+
+.featured_articles {
+    background-color: $black;
+    background-image: url('library/images/dark-denim-3.png');
+    background-repeat: repeat;
+    width: 100%;
+    float: left;
+
+    img.article_image {
+        border-bottom: 4px solid $accent;
+        margin-bottom: 3em;
+    }
+}
+
+.wrap {
+    padding: 3em;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 5em;
+}
+
+img.article_image {
+
+        width: 100%;
+        height: auto;;
+
+}
+
+.article_title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.article_text {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+
+
+// Quotes
+.quote_slider {
+    margin-top: -30px;
+
+    #text-slider {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+
+        span {
+            font-weight: 200;
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        #text-slider-controls {
+            display: none;
+        }
     }
 }
 

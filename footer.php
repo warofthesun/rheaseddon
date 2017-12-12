@@ -1,9 +1,54 @@
 
 			</div> <!-- end .container -->
+
 		</div> <!-- end #main-area -->
+
 	</div> <!-- end #page-wrap -->
+	<?php if( get_field('featured_articles') ): ?>
+		<div class="featured_articles">
+			<div class="wrap">
+				<div>
+					<h3 class="section_title">
+						<span class="light"><?php the_field('featured_header'); ?></span>
+					</h3>
+					<div style="padding-bottom:6em;float:left;">
+						<div class="d-1of3 t-1of3 m-all article">
+							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
+							<div>
+								Title
+							</div>
+							<div>
+								Brief description
+							</div>
+						</div>
+						<div class="d-1of3 t-1of3 m-all article">
+							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
+							<div>
+								Title
+							</div>
+							<div>
+								Brief description
+							</div>
+						</div>
+						<div class="d-1of3 t-1of3 m-all article last-col">
+							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
+							<div>
+								Title
+							</div>
+							<div>
+								Brief description
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
 <!--footer-->
-	<footer id="main-footer">
+
+	<footer id="main-footer" style="clear:both;">
+
 		<div class="container clearfix">
 			<div id="footer-top-shadow"></div>
 
