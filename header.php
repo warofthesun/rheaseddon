@@ -35,7 +35,7 @@
 
 
 	<?php wp_head(); ?>
-	
+
 </head>
 <body <?php body_class(); ?>>
 	<div id="page-wrap">
@@ -93,10 +93,64 @@
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
-		<?php if( get_field('test_text') ): ?>
+		<?php if(get_field('select_header_type') == 'Image') : ?>
+			<?php
+				$attachment_id = get_field('image');
+				$size = "image-header"; // (thumbnail, medium, large, full or custom size)
+				$image = wp_get_attachment_image_src( $attachment_id, $size );
+				// url = $image[0];
+				// width = $image[1];
+				// height = $image[2];
+			  ?>
 
-			<div style="background-color:red;height:200px;"><?php the_field('test_text'); ?></div>
+
+			<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
+				<div>this is some text</div>
+				<button>CTA</button>
+			</div>
+
+		<?php elseif(get_field('select_header_type') == 'Video') : ?>
+
+			<div class="video_header">
+				<div>this is some text</div>
+				<button>CTA</button>
+			</div>
+
+
+			<?php else : ?>
+
+				<!--//do nothing-->
 
 		<?php endif; ?>
+		<?php if( get_field('dual_hero') ): ?>
+			<div class="dual_hero">
+				<div class="wrap">
+					<div>
+
+						<div>
+							<?php
+								$attachment_id = get_field('left_hero_image');
+								$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
+								$image = wp_get_attachment_image_src( $attachment_id, $size );
+								// url = $image[0];
+								// width = $image[1];
+								// height = $image[2];
+							  ?>
+
+							<div class="d-1of2 t-all m-all article" style="background-image:url('<?php echo $image[0]; ?>'); background-repeat:no-repeat;background-size:contain;height:470px;">
+hey
+							</div>
+							<div class="d-1of2 t-all m-all article" style="background-image:url('<?php echo $image[0]; ?>'); background-repeat:no-repeat;background-size:contain;height:470px;">
+hey
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
 		<div id="main-area">
+
 			<div class="container">

@@ -51,31 +51,27 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .m-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 49%; }
-
   .m-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 32.8%; }
-
   .m-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .m-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; } }
+
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
@@ -83,51 +79,43 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .t-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 49%; }
-
   .t-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 32.8%; }
-
   .t-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .t-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .t-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; }
-
   .t-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%; }
-
   .t-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%; }
-
   .t-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%; }
-
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
     width: 80%; } }
+
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
@@ -135,115 +123,117 @@ them however you see fit.
     padding-right: 0.75em;
     width: 100%;
     padding-right: 0; }
-
   .d-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 49%; }
-
   .d-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 32.8%; }
-
   .d-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%; }
-
   .d-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%; }
-
   .d-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%; }
-
   .d-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%; }
-
   .d-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%; }
-
   .d-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%; }
-
   .d-4of5 {
     float: left;
     padding-right: 0.75em;
     width: 80%; }
-
   .d-1of6 {
     float: left;
     padding-right: 0.75em;
     width: 16.6666666667%; }
-
   .d-1of7 {
     float: left;
     padding-right: 0.75em;
     width: 14.2857142857%; }
-
   .d-2of7 {
     float: left;
     padding-right: 0.75em;
     width: 28.5714286%; }
-
   .d-3of7 {
     float: left;
     padding-right: 0.75em;
     width: 42.8571429%; }
-
   .d-4of7 {
     float: left;
     padding-right: 0.75em;
     width: 57.1428572%; }
-
   .d-5of7 {
     float: left;
     padding-right: 0.75em;
     width: 71.4285715%; }
-
   .d-6of7 {
     float: left;
     padding-right: 0.75em;
     width: 85.7142857%; }
-
   .d-1of8 {
     float: left;
     padding-right: 0.75em;
     width: 12.5%; }
-
   .d-1of9 {
     float: left;
     padding-right: 0.75em;
     width: 11.1111111111%; }
-
   .d-1of10 {
     float: left;
     padding-right: 0.75em;
     width: 10%; }
-
   .d-1of11 {
     float: left;
     padding-right: 0.75em;
     width: 9.09090909091%; }
-
   .d-1of12 {
     float: left;
     padding-right: 0.75em;
     width: 8.33%; } }
+
 #main {
   padding-top: 0px !important; }
   #main img#logo {
     height: 100px; }
+
+.video_header, .image_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 650px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.image_header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: top; }
 
 a#mobile_nav {
   background: transparent !important;
@@ -270,6 +260,7 @@ a#mobile_nav {
 
 .sf-with-ul .sf-sub-indicator, #mobile_nav .sf-sub-indicator {
   display: none; }
+
 .sf-with-ul::after, #mobile_nav::after {
   content: "\f0d7";
   font-family: 'fontawesome';
@@ -284,8 +275,10 @@ a#mobile_nav {
 
 .home #main-area {
   padding-top: 0px !important; }
+
 .home #content_area {
   border-top: 0px !important; }
+
 .home .entry {
   border-bottom: 0px; }
 
@@ -308,10 +301,9 @@ a#mobile_nav {
   margin-top: 15em; }
   .about_dr_seddon .article_content {
     display: -ms-flexbox;
-    display: -webkit-flex;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center;
     height: 360px; }
@@ -328,7 +320,6 @@ a#mobile_nav {
 
 .wrap {
   padding: 3em;
-  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding-bottom: 5em; }
@@ -414,10 +405,8 @@ img.article_image {
 @media only screen and (min-width: 768px) {
   #top-menu {
     padding-top: 25px !important; }
-
   #search-form {
     margin-top: 16px; }
-
   #search-form {
     width: 30px;
     -webkit-transition: all .2s;
@@ -440,30 +429,23 @@ img.article_image {
         margin-left: 2em;
         width: 130px !important;
         overflow: hidden; } }
+
 @media only screen and (min-width: 1280px) {
   #main .container {
     width: 1200px !important; }
-
   .container {
     width: 1020px !important; }
-
   .home #main-area {
     max-width: 1200px !important;
     margin: 0 auto; }
   .home #content_area {
     max-width: 1200px !important; }
-
   #main-area {
     max-width: 1020px;
     margin: 0 auto; }
-
   #content_area {
     max-width: 1020px; }
-
   .header_logo {
     float: left; }
-
   #top-menu {
     float: right !important; } }
-
-/*# sourceMappingURL=style.css.map */

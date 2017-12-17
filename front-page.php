@@ -1,8 +1,10 @@
 <!--front page-->
 <?php get_header(); ?>
 <div id="content_area" class="clearfix fullwidth">
+
 	<div id="main_content">
-		<?php get_template_part('loop','home'); ?>
+
+		<?php //get_template_part('loop','home'); ?>
 
 		<?php if( get_field('quote_slider') ): ?>
 			<article>

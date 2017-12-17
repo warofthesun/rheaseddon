@@ -22,6 +22,7 @@ function my_theme_wrapper_end() {
 
 //image sizes
 add_image_size( 'article-thumb', 964, 723, true ); //(cropped)
+add_image_size( 'image-header', 1080, 488, true ); //(cropped)
 
 // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
 //  require_once( 'library/custom-post-type.php' );
