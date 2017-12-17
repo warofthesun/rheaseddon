@@ -10,3 +10,32 @@ $lt-color:      #F2F2F2;
 $accent:        #00CCFF;
 
 $dark-accent:   darken($accent, 10%);
+
+$lt-accent:     lighten($accent,20%);
+
+
+//buttons//
+
+button, .button {
+  padding: 1em 2em;
+  border-radius: 3px;
+  background-color: $accent;
+  color: #fff;
+  border: 1px solid $dark-accent;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px $dark-accent;
+
+  &:hover {
+    text-shadow: -1px -1px 1px $dark-accent;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: $dark-accent;
+  }
+}

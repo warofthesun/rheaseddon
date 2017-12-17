@@ -115,7 +115,7 @@
 			<div class="video_header">
 				<h1 class="hero_title">this is header text</h1>
 				<div class="hero_text">this is some additional text</div>
-				<button>CTA</button>
+				<a href="google.com" class="button">CTA</a>
 			</div>
 
 

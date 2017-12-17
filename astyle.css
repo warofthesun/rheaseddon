@@ -1,0 +1,475 @@
+/*
+ Theme Name:   Astronaut Rhea Seddon
+ Theme URI:
+ Description:  Evolution Child Theme
+ Author: Dan Brown
+ Author URI: daniel.thesplitpixel.com
+ Template:     Evolution
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ GitHub Theme URI: https://github.com/warofthesun/rheaseddon
+ Text Domain:  Evolution-child
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+.last-col {
+  float: right;
+  padding-right: 0 !important; }
+
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+  .m-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .m-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 49%; }
+
+  .m-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 32.8%; }
+
+  .m-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .m-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .m-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; } }
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+  .t-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .t-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 49%; }
+
+  .t-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 32.8%; }
+
+  .t-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .t-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .t-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; }
+
+  .t-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%; }
+
+  .t-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%; }
+
+  .t-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%; }
+
+  .t-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%; } }
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+  .d-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .d-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 49%; }
+
+  .d-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 32.8%; }
+
+  .d-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .d-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .d-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; }
+
+  .d-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%; }
+
+  .d-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%; }
+
+  .d-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%; }
+
+  .d-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%; }
+
+  .d-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%; }
+
+  .d-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%; }
+
+  .d-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%; }
+
+  .d-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%; }
+
+  .d-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%; }
+
+  .d-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%; }
+
+  .d-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%; }
+
+  .d-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%; }
+
+  .d-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%; }
+
+  .d-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%; }
+
+  .d-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%; }
+
+  .d-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%; } }
+#main {
+  padding-top: 0px !important; }
+  #main img#logo {
+    height: 100px; }
+
+.video_header {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+a#mobile_nav {
+  background: transparent !important;
+  border: 0px !important; }
+  a#mobile_nav span {
+    display: none !important; }
+
+#navigation {
+  border-top: 0px !important;
+  border-bottom: 0px !important; }
+  #navigation #top-menu-shadow {
+    display: none !important; }
+  #navigation #top-menu > ul > li.current-menu-item > a {
+    color: #00CCFF !important;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100; }
+
+#search-form {
+  margin-right: 10px !important; }
+
+#bottom-menu-shadow {
+  background-position-x: center !important; }
+
+.sf-with-ul .sf-sub-indicator, #mobile_nav .sf-sub-indicator {
+  display: none; }
+.sf-with-ul::after, #mobile_nav::after {
+  content: "\f0d7";
+  font-family: 'fontawesome';
+  display: block;
+  text-align: center;
+  margin-top: -.5em;
+  color: #00CCFF; }
+
+#mobile_nav.opened::after {
+  content: "\f0d8";
+  font-family: 'fontawesome'; }
+
+.home #main-area {
+  padding-top: 0px !important; }
+.home #content_area {
+  border-top: 0px !important; }
+.home .entry {
+  border-bottom: 0px; }
+
+.section_title {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1em; }
+  .section_title span {
+    border-bottom: 2px solid #00CCFF;
+    padding-bottom: .7em;
+    display: block;
+    width: 330px;
+    margin: 0 auto; }
+    .section_title span.light {
+      color: #D9D9DC; }
+
+.about_dr_seddon {
+  margin-top: 15em; }
+  .about_dr_seddon .article_content {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 360px; }
+
+.featured_articles {
+  background-color: #2b2b2b;
+  background-image: url("library/images/dark-denim-3.png");
+  background-repeat: repeat;
+  width: 100%;
+  float: left; }
+  .featured_articles img.article_image {
+    border-bottom: 4px solid #00CCFF;
+    margin-bottom: 3em; }
+
+.wrap {
+  padding: 3em;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 5em; }
+
+img.article_image {
+  width: 100%;
+  height: auto; }
+
+.article_title {
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 1em;
+  width: 100%; }
+
+.article_text {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 30px; }
+
+.quote_slider {
+  margin-top: -30px; }
+  .quote_slider #text-slider {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600; }
+    .quote_slider #text-slider span {
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 34px; }
+    .quote_slider #text-slider #text-slider-controls {
+      display: none; }
+
+#footer-widgets {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.product_title, .woo h2 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 28px;
+  color: #A0A0A0;
+  padding-bottom: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-bottom: .3em; }
+
+.woocommerce-Price-amount {
+  color: #00a3cc !important;
+  font-style: italic;
+  font-weight: 600; }
+
+.woocommerce-product-details__short-description {
+  font-weight: 400;
+  font-style: normal !important;
+  letter-spacing: .1em; }
+
+.woo h4, .woo .page-title, .woocommerce ul.products li.product h3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-style: italic;
+  letter-spacing: 0; }
+
+.woocommerce ul.products li.product h3 {
+  font-size: 1.5em !important; }
+
+.woocommerce-page div.product div.summary {
+  width: 58% !important; }
+
+.woocommerce-page div.product div.images {
+  width: 38% !important; }
+
+.woo-product-area {
+  padding-top: 15px;
+  padding-right: 10px; }
+
+.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
+  color: #00CCFF !important; }
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
+  display: none; }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  width: 35% !important; }
+
+@media only screen and (min-width: 768px) {
+  #top-menu {
+    padding-top: 25px !important; }
+
+  #search-form {
+    margin-top: 16px; }
+
+  #search-form {
+    width: 30px;
+    -webkit-transition: all .2s;
+    /* Safari */
+    transition: all .2s; }
+    #search-form #searchinput {
+      opacity: 0;
+      -webkit-transition: opacity .2s;
+      /* Safari */
+      transition: opacity .2s;
+      overflow: hidden; }
+    #search-form #searchsubmit {
+      margin-top: 11px;
+      margin-left: 8px;
+      position: absolute; }
+    #search-form:hover, #search-form:active, #search-form:focus {
+      width: 175px; }
+      #search-form:hover #searchinput, #search-form:active #searchinput, #search-form:focus #searchinput {
+        opacity: 1;
+        margin-left: 2em;
+        width: 130px !important;
+        overflow: hidden; } }
+@media only screen and (min-width: 1280px) {
+  #main .container {
+    width: 1200px !important; }
+
+  .container {
+    width: 1020px !important; }
+
+  .home #main-area {
+    max-width: 1200px !important;
+    margin: 0 auto; }
+  .home #content_area {
+    max-width: 1200px !important; }
+
+  #main-area {
+    max-width: 1020px;
+    margin: 0 auto; }
+
+  #content_area {
+    max-width: 1020px; }
+
+  .header_logo {
+    float: left; }
+
+  #top-menu {
+    float: right !important; } }
+
+/*# sourceMappingURL=style.css.map */
