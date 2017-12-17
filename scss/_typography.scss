@@ -1,0 +1,29 @@
+//typography
+
+$sans-serif:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$condensed:        "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Libre Baskerville", Georgia, Cambria, Times New Roman, Times, serif;
+
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4 {
+    font-family: $sans-serif !important;
+}
+
+.hero_title {
+    color: rgba(255,255,255,0.7);
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $condensed !important;
+
+}
+
+.hero_text {
+    max-width: 1080px;
+    width: 80%;
+    margin:2em 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-align: center;
+}

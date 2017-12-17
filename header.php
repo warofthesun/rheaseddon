@@ -105,14 +105,16 @@
 
 
 			<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
-				<div>this is some text</div>
+				<h1 class="hero_title">this is header text</h1>
+				<div class="hero_text">this is some additional text</div>
 				<button>CTA</button>
 			</div>
 
 		<?php elseif(get_field('select_header_type') == 'Video') : ?>
 
 			<div class="video_header">
-				<div>this is some text</div>
+				<h1 class="hero_title">this is header text</h1>
+				<div class="hero_text">this is some additional text</div>
 				<button>CTA</button>
 			</div>
 

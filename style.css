@@ -208,6 +208,25 @@ them however you see fit.
     padding-right: 0.75em;
     width: 8.33%; } }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.hero_title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.hero_text {
+  max-width: 1080px;
+  width: 80%;
+  margin: 2em 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: center; }
+
 #main {
   padding-top: 0px !important; }
   #main img#logo {
@@ -217,7 +236,7 @@ them however you see fit.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 650px;
+  height: 600px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -273,14 +292,23 @@ a#mobile_nav {
   content: "\f0d8";
   font-family: 'fontawesome'; }
 
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 .home #main-area {
   padding-top: 0px !important; }
 
 .home #content_area {
-  border-top: 0px !important; }
+  border-top: 0px !important;
+  padding-bottom: 0em; }
 
 .home .entry {
   border-bottom: 0px; }
+
+.dual_hero {
+  float: left;
+  width: 100%;
+  padding: 5em 0; }
 
 .section_title {
   text-align: center;
@@ -298,7 +326,7 @@ a#mobile_nav {
       color: #D9D9DC; }
 
 .about_dr_seddon {
-  margin-top: 15em; }
+  margin: 5em 0; }
   .about_dr_seddon .article_content {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -313,16 +341,15 @@ a#mobile_nav {
   background-image: url("library/images/dark-denim-3.png");
   background-repeat: repeat;
   width: 100%;
-  float: left; }
+  float: left;
+  padding: 5em 0; }
   .featured_articles img.article_image {
     border-bottom: 4px solid #00CCFF;
     margin-bottom: 3em; }
 
 .wrap {
-  padding: 3em;
   max-width: 1280px;
-  margin: 0 auto;
-  padding-bottom: 5em; }
+  margin: 0 auto; }
 
 img.article_image {
   width: 100%;
@@ -351,6 +378,9 @@ img.article_image {
       line-height: 34px; }
     .quote_slider #text-slider #text-slider-controls {
       display: none; }
+
+.quote_slider-wrap {
+  margin: 5em 0; }
 
 #footer-widgets {
   max-width: 960px;

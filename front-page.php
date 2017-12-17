@@ -7,6 +7,7 @@
 		<?php //get_template_part('loop','home'); ?>
 
 		<?php if( get_field('quote_slider') ): ?>
+			<div class="quote_slider-wrap">
 			<article>
 				<h3 class="section_title">
 					<span><?php the_field('quote_header'); ?></span>
@@ -15,6 +16,7 @@
 					<?php echo do_shortcode('[text-slider]'); ?>
 				</div>
 			</article>
+			</div>
 		<?php endif; ?>
 		<?php if( get_field('about_dr_seddon') ): ?>
 			<article class="d-all t-all m-all about_dr_seddon">

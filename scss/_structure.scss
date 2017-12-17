@@ -9,7 +9,7 @@
 
 .video_header, .image_header {
     display: flex;
-    height: 650px;
+    height: 600px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -81,6 +81,10 @@ a#mobile_nav {
 
 // Body
 
+body {
+    font-family: $sans-serif;
+}
+
 .home {
     #main-area {
         padding-top: 0px !important;
@@ -88,11 +92,18 @@ a#mobile_nav {
 
     #content_area {
         border-top: 0px !important;
+        padding-bottom: 0em;
     }
 
     .entry {
         border-bottom: 0px;
     }
+}
+
+.dual_hero {
+    float: left;
+    width: 100%;
+    padding: 5em 0;
 }
 
 .section_title {
@@ -116,7 +127,8 @@ a#mobile_nav {
 }
 
 .about_dr_seddon {
-    margin-top: 15em;
+    margin: 5em 0;
+
 
     .article_content {
         display: -ms-flexbox;
@@ -136,6 +148,7 @@ a#mobile_nav {
     background-repeat: repeat;
     width: 100%;
     float: left;
+    padding: 5em 0;
 
     img.article_image {
         border-bottom: 4px solid $accent;
@@ -144,10 +157,10 @@ a#mobile_nav {
 }
 
 .wrap {
-    padding: 3em;
+
     max-width: 1280px;
     margin: 0 auto;
-    padding-bottom: 5em;
+
 }
 
 img.article_image {
@@ -191,6 +204,10 @@ img.article_image {
             display: none;
         }
     }
+}
+
+.quote_slider-wrap {
+    margin:5em 0;
 }
 
 

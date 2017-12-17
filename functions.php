@@ -46,4 +46,10 @@ function enqueue_load_fa() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 
+function google_fonts() {
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Open+Sans:400,700,800');
+}
+
+add_action('wp_enqueue_scripts', 'google_fonts');
+
 ?>
