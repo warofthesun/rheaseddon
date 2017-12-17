@@ -27,7 +27,7 @@ over your project's layout.
 // using a mixin since we can't use placeholder selectors
 @mixin grid-col {
   float: left;
-  padding-right: 0.75em;
+  margin-right: 0.75em;
 
 }
 
@@ -35,6 +35,7 @@ over your project's layout.
 .last-col {
   float: right;
   padding-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 
