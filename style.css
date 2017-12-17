@@ -275,6 +275,9 @@ button, .button {
   background-position: center;
   background-position-y: top; }
 
+.temp_style {
+  color: red; }
+
 a#mobile_nav {
   background: transparent !important;
   border: 0px !important; }
