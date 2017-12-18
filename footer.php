@@ -12,34 +12,20 @@
 						<span class="light"><?php the_field('featured_header'); ?></span>
 					</h3>
 					<div style="float:left;">
+						<?php global $post; // required
+						$args = array('numberposts'=>3, 'category_name'=>featured-article, 'order'=>'ASC');
+						$custom_posts = get_posts($args);
+						foreach($custom_posts as $post) : setup_postdata($post); ?>
 						<div class="d-1of3 t-1of3 m-all article">
 							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
-							<div>
+							<div class="article_title">
 								Title
 							</div>
-							<div>
+							<div class="article_text">
 								Brief description
 							</div>
 						</div>
-						<div class="d-1of3 t-1of3 m-all article">
-							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
-							<div>
-								Title
-							</div>
-							<div>
-								Brief description
-							</div>
-						</div>
-						<div class="d-1of3 t-1of3 m-all article last-col">
-							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
-							<div>
-								Title
-							</div>
-							<div>
-								Brief description
-							</div>
-						</div>
-
+						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>

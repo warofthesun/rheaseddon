@@ -27,7 +27,11 @@
 						</h3>
 						<div class="article_text">
 							<?php the_field('text'); ?>
-							Read More >
+						</div>
+						<div>
+							<?php if( get_field('about_read_more') ): ?>
+								<a href="<?php the_field('about_read_more_link'); ?>" class="button"><?php the_field('about_read_more_text'); ?></a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>

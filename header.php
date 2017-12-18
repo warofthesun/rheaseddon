@@ -124,6 +124,16 @@
 				<!--//do nothing-->
 
 		<?php endif; ?>
+		<?php if( get_field('top_cta') ): ?>
+			<div class="top_cta">
+				<?php if( get_field('top_cta_text') ): ?>
+					<div class="article_text"><?php the_field('top_cta_text'); ?></div>
+				<?php endif; ?>
+				<?php if( get_field('top_cta_button_link') ): ?>
+					<div style="text-align:center"><a href="<?php the_field('top_cta_button_link'); ?>" class="button"><?php the_field('top_cta_button_text'); ?></a></div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
 		<?php if( get_field('dual_hero') ): ?>
 			<div class="dual_hero">
 				<div class="wrap">
@@ -179,6 +189,7 @@
 				</div>
 			</div>
 		<?php endif; ?>
+
 		<div id="main-area">
 
 			<div class="container">

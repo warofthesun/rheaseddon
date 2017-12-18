@@ -22,9 +22,6 @@
     background-position: center;
     background-position-y: top;
 }
-.temp_style {
-    color: red;
-}
 
 // Navigation
 a#mobile_nav {
@@ -194,7 +191,7 @@ body {
 
     img.article_image {
         border-bottom: 4px solid $accent;
-        margin-bottom: 3em;
+        margin-bottom: 2.5em;
     }
 }
 
@@ -217,12 +214,34 @@ img.article_image {
     letter-spacing: 1px;
     padding-bottom: 1em;
     width: 100%;
+
+    .featured_articles & {
+      padding-bottom: .5em;
+      font-size: 1.5em;
+      font-family: $condensed;
+      color: #fff;
+    }
 }
 
 .article_text {
     font-size: 20px;
     font-weight: 100;
     line-height: 30px;
+    margin-bottom: 1.5em;
+
+    .top_cta & {
+      text-align: center;
+      max-width: 960px;
+      margin: 2.5em auto;
+    }
+
+    .featured_articles & {
+      color: #fff;
+    }
+}
+
+.top_cta {
+  margin:2.5em 0;
 }
 
 
