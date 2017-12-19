@@ -34,11 +34,13 @@ button, .button, .readmore span {
   box-shadow: 1px 1px 0 $dark-accent, 2px 2px 0 $darker-accent;
   transition: all .5s;
 
+
   &:hover {
     text-shadow: -1px -1px 1px $dark-accent;
     box-shadow: 1px 1px 0 $darker-accent;
     background-color: $dark-accent;
     text-decoration: none;
+
   }
 
   &:active {

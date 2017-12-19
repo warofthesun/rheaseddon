@@ -389,6 +389,29 @@ body {
       margin-bottom: 2em;
       text-align: center; }
 
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+
 .section_title {
   text-align: center;
   font-weight: 600;
@@ -421,13 +444,48 @@ body {
   background-repeat: repeat;
   width: 100%;
   float: left;
-  padding: 5em 0; }
+  padding: 5em 0;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .featured_articles .article {
+    height: 319px;
+    background-size: cover !important;
+    border-bottom: 2px solid #00CCFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .featured_articles .article a:hover {
+      text-decoration: none !important; }
   .featured_articles img.article_image {
     border-bottom: 4px solid #00CCFF;
     margin-bottom: 2.5em; }
   .featured_articles-wrap {
     float: left;
     width: 100%; }
+    .featured_articles-wrap .button {
+      height: 0;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+    .featured_articles-wrap a:hover {
+      text-decoration: none !important; }
+      .featured_articles-wrap a:hover .button {
+        height: auto;
+        margin-top: .5em;
+        padding: 1em 2em;
+        opacity: 1; }
   .featured_articles .article:nth-child(3) {
     margin-right: 0; }
 
@@ -446,9 +504,13 @@ img.article_image {
   width: 100%; }
   .featured_articles .article_title {
     padding-bottom: .5em;
-    font-size: 1.5em;
+    font-size: 2em;
+    line-height: 2em;
     font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #fff; }
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none !important; }
 
 .article_text {
   font-size: 20px;
