@@ -193,6 +193,15 @@ body {
         border-bottom: 4px solid $accent;
         margin-bottom: 2.5em;
     }
+
+    &-wrap {
+        float: left;
+        width: 100%;
+    }
+
+    .article:nth-child(3) {
+        margin-right: 0;
+    }
 }
 
 .wrap {

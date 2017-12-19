@@ -18,7 +18,7 @@ $lt-accent:     lighten($accent,20%);
 
 //buttons//
 
-button, .button {
+button, .button, .readmore span {
   padding: 1em 2em;
   border-radius: 3px;
   background-color: $accent;
@@ -45,4 +45,16 @@ button, .button {
     background-color: $dark-accent;
     box-shadow: -1px -1px 0 $dark-accent, -2px -2px 0 $darker-accent;
   }
+}
+
+.readmore {
+    background-image: none !important;
+
+
+    span {
+        background-image: none !important;
+        background-color: $accent !important;
+        padding:.5em 1em !important;
+        min-width: 100px !important;
+    }
 }

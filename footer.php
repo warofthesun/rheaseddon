@@ -11,19 +11,22 @@
 					<h3 class="section_title">
 						<span class="light"><?php the_field('featured_header'); ?></span>
 					</h3>
-					<div style="float:left;">
+					<div class="featured_articles-wrap">
 						<?php $custom_query = new WP_Query('category_name=featured-article&posts_per_page=3');
 						while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-						<div class="d-1of3 t-1of3 m-all article">
-							<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
+						<a href="<?php the_permalink(); ?>" class="d-1of3 t-1of3 m-all article">
+
+								<img class="article_image" src="http://localhost:8200/wp-content/uploads/2017/12/on-the-steps-1-964x723.jpeg">
+							
 							<div class="article_title">
-								Title
+								<?php the_title(); ?>
 							</div>
 							<div class="article_text">
 								Brief description
 							</div>
-						</div>
+						</a>
+
 
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); // reset the query ?>
