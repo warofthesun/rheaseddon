@@ -112,7 +112,7 @@
 
 		<?php elseif(get_field('select_header_type') == 'Video') : ?>
 
-			<div class="video_header">
+			<div class="video_header other">
 				<h1 class="hero_title">this is header text</h1>
 				<div class="hero_text">this is some additional text</div>
 				<a href="google.com" class="button">CTA</a>
