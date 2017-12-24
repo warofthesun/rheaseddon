@@ -93,10 +93,13 @@
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
+		<?php $custom_query = new WP_Query('pagename=event-header');
+		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+
+
 		<?php if(get_field('select_header_type') == 'Image') : ?>
 			<?php
-				$post_id = 1907;
-				$queried_post = get_post($post_id);
+				
 				$attachment_id = get_field('image');
 				$size = "image-header"; // (thumbnail, medium, large, full or custom size)
 				$image = wp_get_attachment_image_src( $attachment_id, $size );
@@ -134,8 +137,7 @@
 
 
 			<?php else : ?>
-<?php the_title(); ?>
-				<?php the_post_thumbnail(); ?>
+
 
 		<?php endif; ?>
 		<?php if( get_field('top_cta') ): ?>
@@ -148,72 +150,8 @@
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
-		<?php if( get_field('dual_hero') ): ?>
-			<div class="dual_hero">
-				<div class="wrap">
-					<div>
-								<?php
-									$post_id = 1907;
-									$queried_post = get_post($post_id);
-									$attachment_id = get_field('left_hero_image');
-									$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
-									$image = wp_get_attachment_image_src( $attachment_id, $size );
-									// url = $image[0];
-									// width = $image[1];
-									// height = $image[2];
-							  ?>
-								<div class="d-1of2 t-all m-all article" style="background-image:url('<?php echo $image[0]; ?>');">
-										<div class="overlay">
-												<?php if( get_field('hero_copy') ): ?>
-													<?php if( get_field('left_hero_title') ): ?>
-														<h3 class="article_title"><?php the_field('left_hero_title'); ?></h3>
-													<?php endif; ?>
-													<?php if( get_field('left_hero_copy') ): ?>
-														<div class="article_text"><?php the_field('left_hero_copy'); ?></div>
-													<?php endif; ?>
-													<?php if( get_field('left_hero_link') ): ?>
-														<a href="<?php the_field('left_hero_link'); ?>" class="button"><?php the_field('left_hero_cta'); ?></a>
-													<?php endif; ?>
-												<?php endif; ?>
-										</div>
-								</div>
-								<?php
-									$post_id = 1907;
-									$queried_post = get_post($post_id);
-									$attachment_id = get_field('right_hero_image');
-									$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
-									$image = wp_get_attachment_image_src( $attachment_id, $size );
-									// url = $image[0];
-									// width = $image[1];
-									// height = $image[2];
-							  ?>
-								<div class="d-1of2 t-all m-all last-col article" style="background-image:url('<?php echo $image[0]; ?>');">
-										<div class="overlay">
-												<?php if( get_field('hero_copy') ): ?>
-													<?php if( get_field('right_hero_title') ): ?>
-														<h3 class="article_title"><?php the_field('right_hero_title'); ?></h3>
-													<?php endif; ?>
-													<?php if( get_field('right_hero_copy') ): ?>
-														<div class="article_text"><?php the_field('right_hero_copy'); ?></div>
-													<?php endif; ?>
-													<?php if( get_field('right_hero_link') ): ?>
-														<a href="<?php the_field('right_hero_link'); ?>" class="button"><?php the_field('right_hero_cta'); ?></a>
-													<?php endif; ?>
-												<?php endif; ?>
-										</div>
-								</div>
-						</div>
-
-				</div>
-			</div>
-		<?php endif; ?>
-
+	<?php endwhile; ?>
+	<?php wp_reset_postdata(); // reset the query ?>
 		<div id="main-area">
-			<?php
-				$post_id = 1907;
-				$queried_post = get_post($post_id);
-				$src = wp_get_attachment_image_src(get_post_thumbnail_id($queried_post->ID), '') ;
-				$thumb_id = get_post_thumbnail_id($post_id);
-			?>
-			<img src="<?php echo $src[0]; ?>" class="img-responsive" />
-			<div class="container">
+
+		<div class="container">
