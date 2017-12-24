@@ -320,7 +320,9 @@ button, .button, .readmore span {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-position-y: top; }
+  background-position-y: top;
+  max-width: 1600px;
+  margin: 0 auto; }
 
 a#mobile_nav {
   background: transparent !important;
