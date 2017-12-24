@@ -1,0 +1,28 @@
+.events-list, .tribe-events-list {
+  .tribe-events-loop {
+    max-width: 1200px !important;
+
+    .tribe-events-event-image {
+      width: 100% !important;
+    }
+  }
+}
+
+.events {
+  height: 375px;
+  .article_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+  }
+
+
+
+
+}
+
+.entry p {
+  line-height: 1.5em !important;
+}
