@@ -1,10 +1,10 @@
-<!--page_full-->
+<!--page_events-->
 <?php
 /*
-Template Name: Full Width Page
+Template Name: Events Page - Custom
 */
 ?>
-<?php get_header(); ?>
+<?php get_header('events'); ?>
 
 <div id="content_area" class="clearfix fullwidth">
 	<div id="main_content">

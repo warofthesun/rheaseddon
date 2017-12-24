@@ -193,32 +193,6 @@ them however you see fit.
     margin-right: 0.75em;
     width: 8.33%; } }
 
-.events-list .tribe-events-loop, .tribe-events-list .tribe-events-loop {
-  max-width: 1200px !important; }
-  .events-list .tribe-events-loop .tribe-events-event-image, .tribe-events-list .tribe-events-loop .tribe-events-event-image {
-    width: 100% !important; }
-
-.events {
-  height: 375px; }
-  .events .article_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-    height: 100%; }
-
-.entry p {
-  line-height: 1.5em !important; }
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
@@ -276,6 +250,49 @@ button, .button, .readmore span {
     background-color: #00CCFF !important;
     padding: .5em 1em !important;
     min-width: 100px !important; }
+
+.events-list .tribe-events-loop, .tribe-events-list .tribe-events-loop {
+  max-width: 1200px !important; }
+  .events-list .tribe-events-loop .tribe-events-event-image, .tribe-events-list .tribe-events-loop .tribe-events-event-image {
+    width: 100% !important; }
+
+.events {
+  height: 400px; }
+  .events .article_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    height: 100%; }
+  .events .event_title {
+    font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none; }
+  .events .event_location {
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight: 100; }
+  .events .event_date {
+    color: #00CCFF;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #00CCFF;
+    text-decoration: none; }
+
+.entry p {
+  line-height: 1.5em !important; }
 
 #main {
   padding-top: 0px !important; }

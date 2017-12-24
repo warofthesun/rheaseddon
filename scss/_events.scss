@@ -9,7 +9,7 @@
 }
 
 .events {
-  height: 375px;
+  height: 400px;
   .article_content {
     display: flex;
     flex-direction: column;
@@ -18,9 +18,29 @@
     height: 100%;
   }
 
+  .event_title {
+    font-family: $condensed;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
 
+  .event_location {
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight: 100;
+  }
 
+  .event_date {
+    color: $accent;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $accent;
+    text-decoration: none;
 
+  }
 }
 
 .entry p {
