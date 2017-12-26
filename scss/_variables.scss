@@ -18,21 +18,25 @@ $lt-accent:     lighten($accent,20%);
 
 //buttons//
 
-button, .button, .readmore span {
-  padding: 1em 2em;
-  border-radius: 3px;
+@mixin btn {
   background-color: $accent;
   color: #fff;
-  border: 0px solid $dark-accent;
   font-size: 1.2em;
   font-weight: 700;
   text-transform: uppercase;
-  min-width: 200px;
   text-align: center;
   text-decoration: none;
   text-shadow: 1px 1px 1px $dark-accent;
-  box-shadow: 1px 1px 0 $dark-accent, 2px 2px 0 $darker-accent;
   transition: all .5s;
+}
+
+button, .button, .readmore span {
+  @include btn;
+  padding: 1em 2em;
+  border-radius: 3px;
+  border: 0px solid $dark-accent;
+  min-width: 200px;
+  box-shadow: 1px 1px 0 $dark-accent, 2px 2px 0 $darker-accent;
 
 
   &:hover {

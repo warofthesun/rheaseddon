@@ -216,22 +216,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   line-height: 1.5em; }
 
 button, .button, .readmore span {
-  padding: 1em 2em;
-  border-radius: 3px;
   background-color: #00CCFF;
   color: #fff;
-  border: 0px solid #00a3cc;
   font-size: 1.2em;
   font-weight: 700;
   text-transform: uppercase;
-  min-width: 200px;
   text-align: center;
   text-decoration: none;
   text-shadow: 1px 1px 1px #00a3cc;
-  -webkit-box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99;
-          box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  padding: 1em 2em;
+  border-radius: 3px;
+  border: 0px solid #00a3cc;
+  min-width: 200px;
+  -webkit-box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99;
+          box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99; }
   button:hover, .button:hover, .readmore span:hover {
     text-shadow: -1px -1px 1px #00a3cc;
     -webkit-box-shadow: 1px 1px 0 #007a99;
@@ -555,6 +555,52 @@ img.article_image {
 
 .top_cta {
   margin: 2.5em 0; }
+
+#mc_embed_signup_scroll h2 {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 1px; }
+
+#mc_embed_signup_scroll .mc-field-group {
+  margin-top: 2em; }
+  #mc_embed_signup_scroll .mc-field-group br {
+    display: none; }
+  #mc_embed_signup_scroll .mc-field-group input {
+    width: 90%;
+    padding: 1em;
+    border: 1px solid #00CCFF;
+    border-radius: 3px; }
+
+#popslide.rhea_popup {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 5px 5px 0;
+  bottom: 2em !important;
+  -webkit-box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6); }
+
+#popslide .popslide-content {
+  padding-left: 40px; }
+
+#popslide .popslide-close {
+  background-color: #00CCFF;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #00a3cc;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: #fff !important;
+  border-radius: 0 5px 5px 0; }
+  #popslide .popslide-close span {
+    height: 100% !important; }
+  #popslide .popslide-close:hover {
+    text-shadow: -1px -1px 1px #00a3cc;
+    background-color: #00a3cc; }
 
 .quote_slider {
   margin-top: -30px; }

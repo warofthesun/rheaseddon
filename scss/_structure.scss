@@ -314,6 +314,58 @@ img.article_image {
   margin:2.5em 0;
 }
 
+//Email Pop Up
+
+#mc_embed_signup_scroll {
+  h2 {
+    font-family: $condensed !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+  }
+
+  .mc-field-group {
+    margin-top: 2em;
+
+    br {
+      display: none;
+    }
+    input {
+      width: 90%;
+      padding: 1em;
+      border: 1px solid $accent;
+      border-radius: 3px;
+    }
+  }
+}
+#popslide {
+  &.rhea_popup {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 0 5px 5px 0;
+    bottom: 2em !important;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.6);
+  }
+
+  .popslide-content {
+    padding-left: 40px;
+  }
+
+  .popslide-close {
+    @include btn;
+    color: #fff !important;
+    border-radius: 0 5px 5px 0;
+
+    span {
+      height: 100% !important;
+    }
+
+    &:hover {
+      text-shadow: -1px -1px 1px $dark-accent;
+      background-color: $dark-accent;
+    }
+  }
+}
 
 
 // Quotes
