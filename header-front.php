@@ -94,7 +94,49 @@
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
 
-		
+		<?php if(get_field('select_header_type') == 'Image') : ?>
+			<?php
+				$attachment_id = get_field('image');
+				$size = "image-header"; // (thumbnail, medium, large, full or custom size)
+				$image = wp_get_attachment_image_src( $attachment_id, $size );
+				// url = $image[0];
+				// width = $image[1];
+				// height = $image[2];
+			  ?>
+
+
+			<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
+				<?php if( get_field('hero_headline') ): ?>
+					<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
+				<?php endif; ?>
+				<?php if( get_field('hero_copy_line') ): ?>
+					<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
+				<?php endif; ?>
+				<?php if( get_field('hero_cta_link') ): ?>
+					<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
+				<?php endif; ?>
+			</div>
+
+		<?php elseif(get_field('select_header_type') == 'Video') : ?>
+
+			<div class="video_header">
+				<?php if( get_field('hero_headline') ): ?>
+					<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
+				<?php endif; ?>
+				<?php if( get_field('hero_copy_line') ): ?>
+					<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
+				<?php endif; ?>
+				<?php if( get_field('hero_cta_link') ): ?>
+					<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
+				<?php endif; ?>
+			</div>
+
+
+			<?php else : ?>
+
+				<!--//do nothing-->
+
+		<?php endif;?>
 
 		<?php if( get_field('top_cta') ): ?>
 			<div class="top_cta">

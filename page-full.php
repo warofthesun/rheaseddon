@@ -9,7 +9,7 @@ Template Name: Full Width Page
 
 <div id="content_area" class="clearfix fullwidth">
 	<div id="main_content">
-		<?php get_template_part('includes/breadcrumbs','index'); ?>
+		<!--?php get_template_part('includes/breadcrumbs','index'); ?-->
 		<?php get_template_part('loop','page'); ?>
 		<?php if ( 'on' == get_option('evolution_show_pagescomments') ) comments_template('', true); ?>
 	</div> <!-- end #main_content -->

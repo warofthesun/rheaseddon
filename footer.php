@@ -1,4 +1,15 @@
-
+			<?php if( get_field('quote_slider') ): ?>
+				<div class="quote_slider-wrap">
+				<article>
+					<h3 class="section_title">
+						<span><?php the_field('quote_header'); ?></span>
+					</h3>
+					<div class="quote_slider">
+						<?php echo do_shortcode('[text-slider]'); ?>
+					</div>
+				</article>
+				</div>
+			<?php endif; ?>
 			</div> <!-- end .container -->
 
 		</div> <!-- end #main-area -->

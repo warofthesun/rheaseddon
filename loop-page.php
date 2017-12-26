@@ -1,6 +1,6 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<article class="entry post clearfix">
-		<h1 class="main_title"><?php the_title(); ?></h1>
+		<!--h1 class="main_title"--><!--?php the_title(); ?></h1-->
 
 		<?php if (get_option('evolution_page_thumbnails') == 'on') { ?>
 			<?php
@@ -20,7 +20,7 @@
 				</div> 	<!-- end .single-thumbnail -->
 			<?php } ?>
 		<?php } ?>
-		
+
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Evolution').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 		<?php edit_post_link(esc_attr__('Edit this page','Evolution')); ?>
