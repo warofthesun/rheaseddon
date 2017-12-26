@@ -55,4 +55,4 @@
 
 </div> <!-- end #content_area -->
 
-<?php get_footer(); ?>
+<?php get_footer('front'); ?>

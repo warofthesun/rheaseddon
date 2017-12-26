@@ -148,6 +148,8 @@
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
+		<?php $custom_query = new WP_Query('pagename=home-options');
+		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<?php if( get_field('dual_hero') ): ?>
 			<div class="dual_hero">
 				<div class="wrap">
@@ -203,6 +205,8 @@
 				</div>
 			</div>
 		<?php endif; ?>
+	<?php endwhile; ?>
+	<?php wp_reset_postdata(); // reset the query ?>
 
 		<div id="main-area">
 

@@ -616,7 +616,7 @@ img.article_image {
       display: none; }
 
 .quote_slider-wrap {
-  margin: 5em 0; }
+  margin: 5em auto !important; }
 
 #footer-widgets {
   max-width: 960px;
