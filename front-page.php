@@ -1,5 +1,5 @@
 <!--front page-->
-<?php get_header(); ?>
+<?php get_header('front'); ?>
 <div id="content_area" class="clearfix fullwidth">
 
 	<div id="main_content">
