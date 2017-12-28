@@ -19,24 +19,29 @@ $lt-accent:     lighten($accent,20%);
 //buttons//
 
 @mixin btn {
-  background-color: $accent;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 700;
+  background-color: $accent !important;
+  color: #fff !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  text-shadow: 1px 1px 1px $dark-accent;
+  text-shadow: 1px 1px 1px $dark-accent !important;
   transition: all .5s;
 }
 
-button, .button, .readmore span {
+.woocommerce button.button.alt {
+  display: block;
+  clear: both;
+}
+
+button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce button.button.disabled, .woocommerce input.button, .wpcf7-submit {
   @include btn;
   padding: 1em 2em;
   border-radius: 3px;
   border: 0px solid $dark-accent;
   min-width: 200px;
-  box-shadow: 1px 1px 0 $dark-accent, 2px 2px 0 $darker-accent;
+  box-shadow: 1px 1px 0 $dark-accent !important, 2px 2px 0 $darker-accent !important;
 
 
   &:hover {
@@ -51,6 +56,10 @@ button, .button, .readmore span {
     background-color: $dark-accent;
     box-shadow: -1px -1px 0 $dark-accent, -2px -2px 0 $darker-accent;
   }
+}
+
+.wpcf7-submit {
+  max-width: 200px;
 }
 
 .readmore {

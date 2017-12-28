@@ -15,10 +15,10 @@
 		</div> <!-- end #main-area -->
 
 	</div> <!-- end #page-wrap -->
-
+<?php if( get_field('dual_hero') ): ?>
 	<?php $custom_query = new WP_Query('pagename=home-options');
 	while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-	<?php if( get_field('dual_hero') ): ?>
+
 		<div class="dual_hero">
 			<div class="wrap">
 				<div>
@@ -72,8 +72,9 @@
 
 			</div>
 		</div>
+		<?php endwhile; ?>
 	<?php endif; ?>
-	<?php endwhile; ?>
+
 	<?php wp_reset_postdata(); // reset the query ?>
 
 	<?php if( get_field('featured_articles') ): ?>
@@ -123,7 +124,7 @@
 				</div> <!-- end #footer-widgets -->
 			<?php } ?>
 
-			<p id="copyright"><?php esc_html_e('Designed by ','Evolution'); ?> <a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a> | <?php esc_html_e('Powered by ','Evolution'); ?> <a href="http://www.wordpress.org">WordPress</a></p>
+			<p><?php esc_html_e('Designed by ','Evolution'); ?> <a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a> | <?php esc_html_e('Powered by ','Evolution'); ?> <a href="http://www.wordpress.org">WordPress</a></p>
 		</div> <!-- end .container -->
 	</footer> <!-- end #main-footer -->
 

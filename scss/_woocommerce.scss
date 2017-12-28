@@ -1,17 +1,55 @@
-.product_title, .woo h2 {
-	font-family: $sans-serif !important;
-	font-size: 28px;
+.woocommerce {
+	h3 {
+	font-family: $condensed !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+	text-transform: uppercase !important;
+	}
+}
+
+.woo h2 {
+	font-family: $condensed !important;
+	font-size: 1.3em;
     color: $dark-color;
-    padding-bottom: 20px;
-    font-weight: 100;
+		padding-bottom: 20px;
+    font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: .3em;
+    text-transform: uppercase;
+}
+
+.product_title {
+	font-family: $sans-serif!important;
+	font-weight: 100;
+	padding-bottom: .5em;
+	font-size: 2.5em;
+
 }
 
 .woocommerce-Price-amount {
-    color: $dark-accent !important;
-    font-style: italic;
-    font-weight: 600;
+    color: $accent !important;
+		margin-bottom: 1em;
+		display: inline-block;
+
+		.woocommerce-cart-form &, .cart_totals &, .woocommerce-checkout-review-order-table & {
+			color: $black !important;
+			margin-bottom: 0;
+		}
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+		box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+    padding: 1em !important;
+    border-radius: 3px !important;
+    border: 1px solid #eee !important;
+}
+
+.woocommerce-cart-tab-container .widget_shopping_cart .buttons .button {
+	min-width: 100px !important;
 }
 
 .woocommerce-product-details__short-description {
@@ -43,9 +81,11 @@
 	padding-right: 10px;
 }
 
+/*
 .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
 	color: $accent !important;
 }
+*/
 
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
 	display: none;
@@ -53,4 +93,14 @@
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
 	width: 35% !important;
+}
+
+#content_area {
+  &.woocommerce-page {
+    background: none !important;
+
+		.quantity .qty {
+			display: none;
+		}
+  }
 }

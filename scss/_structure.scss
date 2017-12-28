@@ -393,6 +393,49 @@ img.article_image {
     margin:5em auto !important;
 }
 
+//Contact Form
+.wpcf7 {
+  label, .label {
+    font-family: $sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-top: 1em;
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  input:focus, textarea:focus {
+    background: $lt-color;
+    border: 0;
+    border: 1px solid $lt-color !important;
+  }
+  input[type=text], input.text, input.title, textarea, select, input {
+    width: 95%;
+    padding: 1em;
+    padding-right: 0;
+  }
+
+  .inquiry_type {
+    background: $lt-color;
+    padding: 1em;
+    margin: 1em 0;
+  }
+
+  .wpcf7-list-item {
+    &.first {
+      margin: 0;
+    }
+  }
+
+  .contact-radio {
+    padding: 1em 0;
+    float: left;
+  }
+
+
+}
+
 
 // Footer
 

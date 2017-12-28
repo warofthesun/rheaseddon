@@ -215,33 +215,40 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   text-align: center;
   line-height: 1.5em; }
 
-button, .button, .readmore span {
-  background-color: #00CCFF;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 700;
+.woocommerce button.button.alt {
+  display: block;
+  clear: both; }
+
+button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce button.button.disabled, .woocommerce input.button, .wpcf7-submit {
+  background-color: #00CCFF !important;
+  color: #fff !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  text-shadow: 1px 1px 1px #00a3cc;
+  text-shadow: 1px 1px 1px #00a3cc !important;
   -webkit-transition: all .5s;
   transition: all .5s;
   padding: 1em 2em;
   border-radius: 3px;
   border: 0px solid #00a3cc;
   min-width: 200px;
-  -webkit-box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99;
-          box-shadow: 1px 1px 0 #00a3cc, 2px 2px 0 #007a99; }
-  button:hover, .button:hover, .readmore span:hover {
+  -webkit-box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important;
+          box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important; }
+  button:hover, .button:hover, .readmore span:hover, .woocommerce button.button.alt:hover, .woocommerce button.button.disabled:hover, .woocommerce input.button:hover, .wpcf7-submit:hover {
     text-shadow: -1px -1px 1px #00a3cc;
     -webkit-box-shadow: 1px 1px 0 #007a99;
             box-shadow: 1px 1px 0 #007a99;
     background-color: #00a3cc;
     text-decoration: none; }
-  button:active, .button:active, .readmore span:active {
+  button:active, .button:active, .readmore span:active, .woocommerce button.button.alt:active, .woocommerce button.button.disabled:active, .woocommerce input.button:active, .wpcf7-submit:active {
     background-color: #00a3cc;
     -webkit-box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99;
             box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99; }
+
+.wpcf7-submit {
+  max-width: 200px; }
 
 .readmore {
   background-image: none !important; }
@@ -584,14 +591,14 @@ img.article_image {
   padding-left: 40px; }
 
 #popslide .popslide-close {
-  background-color: #00CCFF;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 700;
+  background-color: #00CCFF !important;
+  color: #fff !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  text-shadow: 1px 1px 1px #00a3cc;
+  text-shadow: 1px 1px 1px #00a3cc !important;
   -webkit-transition: all .5s;
   transition: all .5s;
   color: #fff !important;
@@ -618,23 +625,84 @@ img.article_image {
 .quote_slider-wrap {
   margin: 5em auto !important; }
 
+.wpcf7 label, .wpcf7 .label {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-top: 1em;
+  display: block;
+  float: left;
+  width: 100%; }
+
+.wpcf7 input:focus, .wpcf7 textarea:focus {
+  background: #F2F2F2;
+  border: 0;
+  border: 1px solid #F2F2F2 !important; }
+
+.wpcf7 input[type=text], .wpcf7 input.text, .wpcf7 input.title, .wpcf7 textarea, .wpcf7 select, .wpcf7 input {
+  width: 95%;
+  padding: 1em;
+  padding-right: 0; }
+
+.wpcf7 .inquiry_type {
+  background: #F2F2F2;
+  padding: 1em;
+  margin: 1em 0; }
+
+.wpcf7 .wpcf7-list-item.first {
+  margin: 0; }
+
+.wpcf7 .contact-radio {
+  padding: 1em 0;
+  float: left; }
+
 #footer-widgets {
   max-width: 960px;
   margin: 0 auto; }
 
-.product_title, .woo h2 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 28px;
+.woocommerce h3 {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  text-transform: uppercase !important; }
+
+.woo h2 {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1.3em;
   color: #A0A0A0;
   padding-bottom: 20px;
-  font-weight: 100;
+  font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: .3em; }
+  margin-bottom: .3em;
+  text-transform: uppercase; }
+
+.product_title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 100;
+  padding-bottom: .5em;
+  font-size: 2.5em; }
 
 .woocommerce-Price-amount {
-  color: #00a3cc !important;
-  font-style: italic;
-  font-weight: 600; }
+  color: #00CCFF !important;
+  margin-bottom: 1em;
+  display: inline-block; }
+  .woocommerce-cart-form .woocommerce-Price-amount, .cart_totals .woocommerce-Price-amount, .woocommerce-checkout-review-order-table .woocommerce-Price-amount {
+    color: #2b2b2b !important;
+    margin-bottom: 0; }
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  line-height: 1;
+  padding: 1em !important;
+  border-radius: 3px !important;
+  border: 1px solid #eee !important; }
+
+.woocommerce-cart-tab-container .widget_shopping_cart .buttons .button {
+  min-width: 100px !important; }
 
 .woocommerce-product-details__short-description {
   font-weight: 400;
@@ -659,14 +727,21 @@ img.article_image {
   padding-top: 15px;
   padding-right: 10px; }
 
+/*
 .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
-  color: #00CCFF !important; }
-
+	color: $accent !important;
+}
+*/
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count, .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
   display: none; }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   width: 35% !important; }
+
+#content_area.woocommerce-page {
+  background: none !important; }
+  #content_area.woocommerce-page .quantity .qty {
+    display: none; }
 
 @media only screen and (min-width: 768px) {
   #top-menu {
