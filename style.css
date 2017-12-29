@@ -645,9 +645,15 @@ img.article_image {
   padding-right: 0; }
 
 .wpcf7 .inquiry_type {
-  background: #F2F2F2;
-  padding: 1em;
+  padding: 1em 0;
   margin: 1em 0; }
+
+.wpcf7 .wpcf7-list-item-label {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  padding-top: .5em;
+  font-size: 1.2em; }
 
 .wpcf7 .wpcf7-list-item.first {
   margin: 0; }

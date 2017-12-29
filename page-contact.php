@@ -20,7 +20,27 @@ Template Name: Contact Page
 			</article> <!-- end .entry -->
 		<?php endwhile; // end of the loop. ?>
 	</div> <!-- end #main_content -->
-	<div class="d-1of2 t-1of2 m-all last-col">side content
+	<div class="d-1of2 t-1of2 m-all last-col">
+		<?php
+
+// check if the repeater field has rows of data
+if( have_rows('video_clips') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('video_clips') ) : the_row(); 
+
+        // display a sub field value
+        the_sub_field('video_link');
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
 	</div>
 </div> <!-- end #content_area -->
 

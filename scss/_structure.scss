@@ -417,9 +417,16 @@ img.article_image {
   }
 
   .inquiry_type {
-    background: $lt-color;
-    padding: 1em;
+    padding: 1em 0;
     margin: 1em 0;
+  }
+
+  .wpcf7-list-item-label {
+    font-family: $condensed;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: .5em;
+    font-size: 1.2em;
   }
 
   .wpcf7-list-item {
