@@ -30,9 +30,6 @@ if( have_rows('video_clips') ):
  	// loop through the rows of data
     while ( have_rows('video_clips') ) : the_row();
 
-        
-
-
 
 				// get iframe HTML
 				$iframe = get_sub_field('video_link');
@@ -47,7 +44,8 @@ if( have_rows('video_clips') ):
 				$params = array(
 				'showinfo'    => 0,
 				'hd'        => 1,
-				'autohide'    => 1
+				'autohide'    => 1,
+				'rel' => 0
 				);
 
 				$new_src = add_query_arg($params, $src);
@@ -64,7 +62,7 @@ if( have_rows('video_clips') ):
 				// echo $iframe
 				echo $iframe;
 
-
+				the_sub_field('video_title');
 
     endwhile;
 
