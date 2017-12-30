@@ -93,7 +93,8 @@
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
-
+		<?php $custom_query = new WP_Query('pagename=home-options');
+		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<?php if(get_field('select_header_type') == 'Image') : ?>
 			<?php
 				$attachment_id = get_field('image');
@@ -148,9 +149,8 @@
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
-		<?php $custom_query = new WP_Query('pagename=home-options');
-		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-		<?php if( get_field('dual_hero') ): ?>
+
+			<?php if( get_field('dual_hero') ): ?>
 			<div class="dual_hero">
 				<div class="wrap">
 					<div>

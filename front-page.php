@@ -5,7 +5,8 @@
 	<div id="main_content">
 
 		<?php //get_template_part('loop','home'); ?>
-
+		<?php $custom_query = new WP_Query('pagename=home-options');
+		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<?php if( get_field('quote_slider') ): ?>
 			<div class="quote_slider-wrap">
 			<article>
@@ -50,7 +51,8 @@
 				</div>
 			</article>
 		<?php endif; ?>
-
+	<?php endwhile; ?>
+	<?php wp_reset_postdata(); // reset the query ?>
 	</div> <!-- end #main_content -->
 
 </div> <!-- end #content_area -->

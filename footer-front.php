@@ -4,6 +4,8 @@
 		</div> <!-- end #main-area -->
 
 	</div> <!-- end #page-wrap -->
+	<?php $custom_query = new WP_Query('pagename=home-options');
+	while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	<?php if( get_field('featured_articles') ): ?>
 		<div class="featured_articles">
 			<div class="wrap">
@@ -30,6 +32,8 @@
 			</div>
 		</div>
 	<?php endif; ?>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); // reset the query ?>
 <!--footer-->
 
 	<footer id="main-footer" style="clear:both;">
