@@ -15,7 +15,7 @@
 		</div> <!-- end #main-area -->
 
 	</div> <!-- end #page-wrap -->
-<?php if( get_field('dual_hero') ): ?>
+<?php if( get_field('dual_hero_lower') ): ?>
 	<?php $custom_query = new WP_Query('pagename=home-options');
 	while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
