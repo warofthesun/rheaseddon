@@ -5,7 +5,7 @@
  Author: Dan Brown
  Author URI: daniel.thesplitpixel.com
  Template:     Evolution
- Version:      1.0.3
+ Version:      1.0.1
  License:      GNU General Public License v2 or later
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
@@ -43,7 +43,7 @@ them however you see fit.
   .m-1of3 {
     float: left;
     margin-right: 0.75em;
-    width: 32.8%; }
+    width: 32.4%; }
   .m-2of3 {
     float: left;
     margin-right: 0.75em;
@@ -71,7 +71,7 @@ them however you see fit.
   .t-1of3 {
     float: left;
     margin-right: 0.75em;
-    width: 32.8%; }
+    width: 32.4%; }
   .t-2of3 {
     float: left;
     margin-right: 0.75em;
@@ -115,7 +115,7 @@ them however you see fit.
   .d-1of3 {
     float: left;
     margin-right: 0.75em;
-    width: 32.8%; }
+    width: 32.4%; }
   .d-2of3 {
     float: left;
     margin-right: 0.75em;
@@ -215,6 +215,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   text-align: center;
   line-height: 1.5em; }
 
+.video_title {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 .woocommerce button.button.alt {
   display: block;
   clear: both; }
@@ -300,6 +305,10 @@ button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce bu
 
 .entry p {
   line-height: 1.5em !important; }
+
+.header_logo {
+  position: relative;
+  z-index: 99; }
 
 #main {
   padding-top: 0px !important; }
@@ -661,6 +670,12 @@ img.article_image {
 .wpcf7 .contact-radio {
   padding: 1em 0;
   float: left; }
+
+.gallery_image:nth-child(3n+3) {
+  margin-right: 0; }
+
+.gallery_video:nth-child(2n+2) {
+  margin-right: 0; }
 
 #footer-widgets {
   max-width: 960px;

@@ -60,9 +60,13 @@ if( have_rows('video_clips') ):
 
 
 				// echo $iframe
-				echo $iframe;
+				echo $iframe; ?>
 
-				the_sub_field('video_title');
+				<div class="video_title">
+					<?php the_sub_field('video_title'); ?>
+				</div>
+				
+				<?php
 
     endwhile;
 

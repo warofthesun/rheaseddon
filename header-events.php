@@ -98,7 +98,7 @@
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'image-header' );?>
 
 
-		<?php if( get_field('events_page_header') ): ?>
+		<?php if( get_field('page_header') ): ?>
 			<div class="image_header" style="background-image:url('<?php echo $backgroundImg[0]; ?>')">
 				<?php if( get_field('hero_headline') ): ?>
 					<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>

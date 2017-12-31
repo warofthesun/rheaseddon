@@ -42,7 +42,7 @@
 		<header id="main">
 			<div class="container top-info">
 				<div class="header_logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<a href="/">
 						<?php $logo = (get_option('evolution_logo') <> '') ? esc_attr(get_option('evolution_logo')) : get_template_directory_uri() . '/images/logo.png'; ?>
 						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" id="logo"/>
 					</a>
