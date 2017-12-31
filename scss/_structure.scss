@@ -450,8 +450,16 @@ img.article_image {
 
 // Gallery
 .gallery_image {
+  height: 260px;
+  overflow: hidden;
+
   &:nth-child(3n+3) {
     margin-right: 0;
+
+  }
+
+  &:nth-child(3n+4) {
+    clear: left;
   }
 }
 
