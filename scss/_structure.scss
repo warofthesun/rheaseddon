@@ -450,8 +450,9 @@ img.article_image {
 
 // Gallery
 .gallery_image {
-  height: 260px;
+  height: 250px;
   overflow: hidden;
+  margin-bottom: 1em;
 
   &:nth-child(3n+3) {
     margin-right: 0;
