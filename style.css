@@ -1,15 +1,58 @@
 /*
- Theme Name:   Astronaut Rhea Seddon
+ Theme Name:   Astronaut Rhea Seddon 2018
  Theme URI:
  Description:  Evolution Child Theme
  Author: Dan Brown
- Author URI: daniel.thesplitpixel.com
+ Author URI: thesplitpixel.com
  Template:     Evolution
- Version:      1.0.5
+ Version:      1.0.6
  License:      GNU General Public License v2 or later
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
 */
+.woocommerce button.button.alt {
+  display: block;
+  clear: both; }
+
+button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce button.button.disabled, .woocommerce input.button, .wpcf7-submit {
+  background-color: #00CCFF !important;
+  color: #fff !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #00a3cc !important;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding: 1em 2em;
+  border-radius: 3px;
+  border: 0px solid #00a3cc;
+  min-width: 200px;
+  -webkit-box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important;
+          box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important; }
+  button:hover, .button:hover, .readmore span:hover, .woocommerce button.button.alt:hover, .woocommerce button.button.disabled:hover, .woocommerce input.button:hover, .wpcf7-submit:hover {
+    text-shadow: -1px -1px 1px #00a3cc;
+    -webkit-box-shadow: 1px 1px 0 #007a99;
+            box-shadow: 1px 1px 0 #007a99;
+    background-color: #00a3cc;
+    text-decoration: none; }
+  button:active, .button:active, .readmore span:active, .woocommerce button.button.alt:active, .woocommerce button.button.disabled:active, .woocommerce input.button:active, .wpcf7-submit:active {
+    background-color: #00a3cc;
+    -webkit-box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99;
+            box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99; }
+
+.wpcf7-submit {
+  max-width: 200px; }
+
+.readmore {
+  background-image: none !important; }
+  .readmore span {
+    background-image: none !important;
+    background-color: #00CCFF !important;
+    padding: .5em 1em !important;
+    min-width: 100px !important; }
+
 /******************************************************************
 
 
@@ -213,55 +256,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 300;
   font-size: 1.5em;
   text-align: center;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  text-shadow: 1px 1px 1px #A0A0A0; }
 
 .video_title {
   font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
-
-.woocommerce button.button.alt {
-  display: block;
-  clear: both; }
-
-button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce button.button.disabled, .woocommerce input.button, .wpcf7-submit {
-  background-color: #00CCFF !important;
-  color: #fff !important;
-  font-size: 1.2em !important;
-  font-weight: 700 !important;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #00a3cc !important;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  padding: 1em 2em;
-  border-radius: 3px;
-  border: 0px solid #00a3cc;
-  min-width: 200px;
-  -webkit-box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important;
-          box-shadow: 1px 1px 0 #00a3cc !important, 2px 2px 0 #007a99 !important; }
-  button:hover, .button:hover, .readmore span:hover, .woocommerce button.button.alt:hover, .woocommerce button.button.disabled:hover, .woocommerce input.button:hover, .wpcf7-submit:hover {
-    text-shadow: -1px -1px 1px #00a3cc;
-    -webkit-box-shadow: 1px 1px 0 #007a99;
-            box-shadow: 1px 1px 0 #007a99;
-    background-color: #00a3cc;
-    text-decoration: none; }
-  button:active, .button:active, .readmore span:active, .woocommerce button.button.alt:active, .woocommerce button.button.disabled:active, .woocommerce input.button:active, .wpcf7-submit:active {
-    background-color: #00a3cc;
-    -webkit-box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99;
-            box-shadow: -1px -1px 0 #00a3cc, -2px -2px 0 #007a99; }
-
-.wpcf7-submit {
-  max-width: 200px; }
-
-.readmore {
-  background-image: none !important; }
-  .readmore span {
-    background-image: none !important;
-    background-color: #00CCFF !important;
-    padding: .5em 1em !important;
-    min-width: 100px !important; }
 
 .events-list .tribe-events-loop, .tribe-events-list .tribe-events-loop {
   max-width: 1200px !important; }
