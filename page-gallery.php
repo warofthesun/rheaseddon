@@ -9,7 +9,7 @@ Template Name: Gallery Page
 
 <div id="content_area" class="clearfix fullwidth">
 	<div id="main_content">
-		hey
+
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 			<?php
@@ -26,18 +26,17 @@ Template Name: Gallery Page
 				                $images = get_sub_field('image_gallery');
 				                //create a loop to display the gallery images:https://www.advancedcustomfields.com/resources/gallery/
 												if( $images ): ?>
-											    <ul>
-											        <?php foreach( $images as $image ): ?>
-											            <li>
-											                <a href="<?php echo $image['url']; ?>">
-											                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-											                </a>
-											                <p><?php echo $image['caption']; ?></p>
-											            </li>
-											        <?php endforeach; ?>
-											    </ul>
+													<ul>
+															<?php foreach( $images as $image ): ?>
+																	<li class="d-1of3 t-1of3 m-1of2 gallery_image">
+																			<a rel="gallery" href="<?php echo $image['url']; ?>">
+																					 <img src="<?php echo $image['sizes']['article-thumb']; ?>" alt="<?php echo $image['caption']; ?>" width="100%"/>
+																			</a>
+																	</li>
+															<?php endforeach; ?>
+													</ul>
 											<?php endif; ?>
-				         <?php       //
+				         <?php
 
 				        elseif( get_row_layout() == 'videos' ):
 
@@ -48,9 +47,40 @@ Template Name: Gallery Page
 				 	            // loop through the rows of data
 				                    while ( have_rows('video_clips') ) : the_row(); ?>
 
-				                           // display a sub field value
-				                          <div><?php the_sub_field('video_clip'); ?></div>
+														<div class="d-1of2 t-all m-all gallery_video">
+														<?php
+														// get iframe HTML
+														$iframe = get_sub_field('video_clip');
+
+
+														// use preg_match to find iframe src
+														preg_match('/src="(.+?)"/', $iframe, $matches);
+														$src = $matches[1];
+
+
+														// add extra params to iframe src
+														$params = array(
+														'showinfo'    => 0,
+														'hd'        => 1,
+														'autohide'    => 1,
+														'rel' => 0
+														);
+
+														$new_src = add_query_arg($params, $src);
+
+														$iframe = str_replace($src, $new_src, $iframe);
+
+
+														// add extra attributes to iframe html
+														$attributes = 'showinfo=0';
+
+														$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+														// echo $iframe
+														echo $iframe; ?>
 				                           <div><?php the_sub_field('video_title'); ?></div>
+																 </div>
 													 <?php
 
 				                    endwhile;
@@ -71,8 +101,6 @@ Template Name: Gallery Page
 				endif;
 
 				?>
-
-there
 		<?php endwhile; // end of the loop. ?>
 	</div> <!-- end #main_content -->
 </div> <!-- end #content_area -->
