@@ -47,7 +47,7 @@ button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce bu
   &:hover {
     text-shadow: -1px -1px 1px $dark-accent;
     box-shadow: 1px 1px 0 $darker-accent;
-    background-color: $dark-accent;
+    background-color: $dark-accent !important;
     text-decoration: none;
 
   }

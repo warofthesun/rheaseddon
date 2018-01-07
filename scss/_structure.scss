@@ -124,13 +124,27 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        opacity: 0;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.0);
         transition: all .5s;
 
+        .button {
+          opacity: 0;
+          height: 0;
+        }
+
         &:hover {
-          opacity: 1;
+          background-color: rgba(0,0,0,0.5);
+
+          .button {
+            opacity: 1;
+            height: auto;
+            margin-top: 2em;
+
+            &:hover {
+              background-color: $dark-accent !important;
+            }
+          }
         }
       }
 
@@ -140,12 +154,14 @@ body {
         text-align: center;
         color:#fff;
         font-size: 3em;
+        padding-bottom: 0;
       }
 
       &_text {
         width: 80%;
         color: #fff;
-        margin-bottom: 2em;
+        margin-top: 1em;
+        margin-bottom: 0;
         text-align: center;
       }
 
@@ -165,6 +181,12 @@ body {
 
   &:hover {
     background-color: rgba(0,0,0,0.5);
+  }
+
+  .button {
+    &:hover {
+      background-color: $dark-accent !important;
+    }
   }
 }
 

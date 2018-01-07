@@ -35,7 +35,7 @@ button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce bu
     text-shadow: -1px -1px 1px #00a3cc;
     -webkit-box-shadow: 1px 1px 0 #007a99;
             box-shadow: 1px 1px 0 #007a99;
-    background-color: #00a3cc;
+    background-color: #00a3cc !important;
     text-decoration: none; }
   button:active, .button:active, .readmore span:active, .woocommerce button.button.alt:active, .woocommerce button.button.disabled:active, .woocommerce input.button:active, .wpcf7-submit:active {
     background-color: #00a3cc;
@@ -416,23 +416,33 @@ body {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      opacity: 0;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: transparent;
       -webkit-transition: all .5s;
       transition: all .5s; }
+      .dual_hero .article .overlay .button {
+        opacity: 0;
+        height: 0; }
       .dual_hero .article .overlay:hover {
-        opacity: 1; }
+        background-color: rgba(0, 0, 0, 0.5); }
+        .dual_hero .article .overlay:hover .button {
+          opacity: 1;
+          height: auto;
+          margin-top: 2em; }
+          .dual_hero .article .overlay:hover .button:hover {
+            background-color: #00a3cc !important; }
     .dual_hero .article_title {
       font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
       text-transform: uppercase;
       text-align: center;
       color: #fff;
-      font-size: 3em; }
+      font-size: 3em;
+      padding-bottom: 0; }
     .dual_hero .article_text {
       width: 80%;
       color: #fff;
-      margin-bottom: 2em;
+      margin-top: 1em;
+      margin-bottom: 0;
       text-align: center; }
 
 .overlay {
@@ -457,6 +467,8 @@ body {
   transition: all .5s; }
   .overlay:hover {
     background-color: rgba(0, 0, 0, 0.5); }
+  .overlay .button:hover {
+    background-color: #00a3cc !important; }
 
 .section_title {
   text-align: center;
