@@ -20,6 +20,10 @@ function my_theme_wrapper_end() {
   echo '</div>';
 }*/
 
+add_theme_support( 'custom-header', array(
+ 'video' => true,
+) );
+
 //image sizes
 add_image_size( 'gallery-thumb', 335, 251, true ); //(cropped)
 add_image_size( 'article-thumb', 964, 723, true ); //(cropped)

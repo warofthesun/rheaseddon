@@ -120,16 +120,24 @@
 
 		<?php elseif(get_field('select_header_type') == 'Video') : ?>
 
-			<div class="video_header">
-				<?php if( get_field('hero_headline') ): ?>
-					<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
-				<?php endif; ?>
-				<?php if( get_field('hero_copy_line') ): ?>
-					<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
-				<?php endif; ?>
-				<?php if( get_field('hero_cta_link') ): ?>
-					<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
-				<?php endif; ?>
+			<div class="video_header" style="position:relative;z-index:1;">
+				<div class="video_container">
+
+					<?php the_custom_header_markup('image-header') ?>
+
+					</div>
+					<div class="video_overlay"></div>
+					<div class="video_overlay_content">
+						<?php if( get_field('hero_headline') ): ?>
+							<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
+						<?php endif; ?>
+						<?php if( get_field('hero_copy_line') ): ?>
+							<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
+						<?php endif; ?>
+						<?php if( get_field('hero_cta_link') ): ?>
+							<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
+						<?php endif; ?>
+					</div>
 			</div>
 
 

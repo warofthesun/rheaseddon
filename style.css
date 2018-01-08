@@ -251,7 +251,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .hero_text {
   max-width: 1080px;
   width: 80%;
-  margin: 2.5em 0;
+  margin: 2.5em auto 0 auto;
   color: #fff;
   font-weight: 300;
   font-size: 1.5em;
@@ -320,7 +320,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 600px;
+  height: 400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -332,6 +332,37 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 5em; }
+
+.wp-custom-header {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; }
+
+.wp-custom-header iframe,
+.wp-custom-header video {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%; }
+
+.wp-custom-header img {
+  width: 100%;
+  height: auto; }
+
+.video_container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #444; }
 
 .image_header {
   background-repeat: no-repeat;
@@ -391,6 +422,17 @@ body {
 
 .home .entry {
   border-bottom: 0px; }
+
+.video_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.video_overlay_content {
+  position: relative;
+  z-index: 3; }
 
 .dual_hero {
   float: left;
@@ -788,6 +830,8 @@ img.article_image {
     padding-top: 25px !important; }
   #search-form {
     margin-top: 16px; }
+  .video_header, .image_header {
+    height: 600px; }
   #search-form {
     width: 30px;
     -webkit-transition: all .2s;
