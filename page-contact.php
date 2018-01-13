@@ -16,9 +16,12 @@ Template Name: Contact Page
 		<?php endwhile; // end of the loop. ?>
 	</div> <!-- end #main_content -->
 	<div class="d-1of2 t-1of2 m-all last-col">
+		<?php if( get_field('include_speaking_topics') ): ?>
+			<?php $custom_query = new WP_Query('pagename=speaking-topics');
+			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<h2 class="speaking_topic">Speaking Topics</h2>
-		<?php
-		//create a repeater loop
+			<?php
+			//create a repeater loop
 				 // check if the repeater field has rows of data
 					if( have_rows('speaking_topics') ): ?>
 						<div class="speaking_topics">
@@ -76,6 +79,8 @@ Template Name: Contact Page
 
 								endif;
 							?>
+						<?php endwhile; ?>
+					<?php endif; ?>
 
 	</div>
 </div> <!-- end #content_area -->
