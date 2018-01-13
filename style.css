@@ -434,6 +434,50 @@ body {
   position: relative;
   z-index: 3; }
 
+h2.speaking_topic {
+  margin-top: -.5em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #00CCFF;
+  font-weight: 100;
+  letter-spacing: 1px; }
+
+.contact .speaking_topics .speaking_topic {
+  float: left;
+  margin-bottom: 2em;
+  padding-bottom: 0em;
+  border-bottom: opx solid #F2F2F2; }
+
+.contact .speaking_topics .title {
+  font-size: 1.3em;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  text-transform: uppercase;
+  border-bottom: 0px;
+  letter-spacing: 1px; }
+
+.speaking_topics .speaking_topic {
+  float: left;
+  margin-bottom: 6em;
+  padding-bottom: 4em;
+  border-bottom: 1px solid #F2F2F2; }
+  .speaking_topics .speaking_topic li {
+    margin: .5em 0; }
+  .speaking_topics .speaking_topic:last-child {
+    border-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+
+.speaking_topics .title {
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 100;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #00CCFF; }
+
 .dual_hero {
   float: left;
   width: 100%;
@@ -800,10 +844,10 @@ img.article_image {
   font-size: 1.5em !important; }
 
 .woocommerce-page div.product div.summary {
-  width: 58% !important; }
+  width: 100% !important; }
 
 .woocommerce-page div.product div.images {
-  width: 38% !important; }
+  width: 100% !important; }
 
 .woo-product-area {
   padding-top: 15px;
@@ -818,7 +862,19 @@ img.article_image {
   display: none; }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  width: 35% !important; }
+  width: 100% !important; }
+  .woocommerce ul.products li.product .button, .woocommerce-page ul.products li.product .button {
+    min-width: 170px !important; }
+  .woocommerce ul.products li.product:last-child, .woocommerce ul.products li.product:nth-of-type(3n+0), .woocommerce-page ul.products li.product:last-child, .woocommerce-page ul.products li.product:nth-of-type(3n+0) {
+    margin-right: 0; }
+
+@media only screen and (min-width: 768px) {
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    width: 30% !important; }
+  .woocommerce-page div.product div.images {
+    width: 38% !important; }
+  .woocommerce-page div.product div.summary {
+    width: 58% !important; } }
 
 #content_area.woocommerce-page {
   background: none !important; }

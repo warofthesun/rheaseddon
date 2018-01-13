@@ -20,6 +20,7 @@ function my_theme_wrapper_end() {
   echo '</div>';
 }*/
 
+
 add_theme_support( 'custom-header', array(
  'video' => true,
 ) );
@@ -42,6 +43,14 @@ add_image_size( 'image-header', 1080, 488, true ); //(cropped)
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
+}
+
+// Change number or products per row to 3
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3; // 3 products per row
+	}
 }
 
 function enqueue_load_fa() {

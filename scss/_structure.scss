@@ -160,6 +160,65 @@ body {
   z-index: 3;
 }
 
+h2 {
+  &.speaking_topic {
+    margin-top: -.5em;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid $accent;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+}
+.contact {
+  .speaking_topics {
+    .speaking_topic {
+      float: left;
+      margin-bottom: 2em;
+      padding-bottom: 0em;
+      border-bottom: opx solid $lt-color;
+    }
+
+    .title {
+        font-size: 1.3em;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: .5em;
+        padding-bottom: .5em;
+        text-transform: uppercase;
+        border-bottom: 0px;
+        letter-spacing: 1px;
+    }
+  }
+}
+
+.speaking_topics {
+  .speaking_topic {
+    float: left;
+    margin-bottom: 6em;
+    padding-bottom: 4em;
+    border-bottom: 1px solid $lt-color;
+
+    li {
+      margin:.5em 0;
+    }
+
+    &:last-child {
+      border-bottom: 0px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .title {
+      font-size: 3em;
+      font-style: normal;
+      font-weight: 100;
+      margin-bottom: .5em;
+      padding-bottom: .5em;
+      border-bottom: 1px solid $accent;
+  }
+}
+
 .dual_hero {
     float: left;
     width: 100%;
