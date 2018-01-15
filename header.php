@@ -94,19 +94,23 @@
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'image-header' );?>
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'image-header' );?>
 
 		<?php if( get_field('page_header') ): ?>
-			<div class="image_header" style="background-image:url('<?php echo $backgroundImg[0]; ?>')">
-				<?php if( get_field('hero_headline') ): ?>
-					<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
-				<?php endif; ?>
-				<?php if( get_field('hero_copy_line') ): ?>
-					<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
-				<?php endif; ?>
-				<?php if( get_field('hero_cta_link') ): ?>
-					<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
-				<?php endif; ?>
+			<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
+				<div class="image_overlay"></div>
+					<div class="image_overlay_content">
+						<?php if( get_field('hero_headline') ): ?>
+							<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
+						<?php endif; ?>
+						<?php if( get_field('hero_copy_line') ): ?>
+							<div class="hero_text"><?php the_field('hero_copy_line'); ?></div>
+						<?php endif; ?>
+						<?php if( get_field('hero_cta_link') ): ?>
+							<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 		<?php endif; ?>
 
