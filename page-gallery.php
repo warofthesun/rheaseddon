@@ -18,10 +18,13 @@ Template Name: Gallery Page
 				if( have_rows('flexible_gallery') ):
 
 				     // loop through the rows of data
-				    while ( have_rows('flexible_gallery') ) : the_row();
+				    while ( have_rows('flexible_gallery') ) : the_row(); ?>
 
-				        if( get_row_layout() == 'images' ):
+							<?php
 
+				        if( get_row_layout() == 'images' ): ?>
+									<div class="gallery_row">
+										<?php
 				        	//display the gallery
 				                $images = get_sub_field('image_gallery');
 				                //create a loop to display the gallery images:https://www.advancedcustomfields.com/resources/gallery/
@@ -35,15 +38,19 @@ Template Name: Gallery Page
 																	</li>
 															<?php endforeach; ?>
 													</ul>
+													</div>
 											<?php endif; ?>
+
 				         <?php
 
-				        elseif( get_row_layout() == 'videos' ):
+				        elseif( get_row_layout() == 'videos' ): ?>
 
+										<?php
 				        	//create a repeater loop
 				               // check if the repeater field has rows of data
-				                if( have_rows('video_clips') ):
-
+				                if( have_rows('video_clips') ): ?>
+													<div class="gallery_row">
+														<?php
 				 	            // loop through the rows of data
 				                    while ( have_rows('video_clips') ) : the_row(); ?>
 
@@ -79,7 +86,7 @@ Template Name: Gallery Page
 
 														// echo $iframe
 														echo $iframe; ?>
-				                           <div><?php the_sub_field('video_title'); ?></div>
+				                           <div class="video_title"><?php the_sub_field('video_title'); ?></div>
 																 </div>
 													 <?php
 
@@ -89,7 +96,9 @@ Template Name: Gallery Page
 
 				                 // no rows found
 
-				                endif;
+											 endif; ?>
+												</div>
+												<?php
 				        endif;
 
 				    endwhile;

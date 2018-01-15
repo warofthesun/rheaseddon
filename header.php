@@ -110,7 +110,6 @@
 							<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
 						<?php endif; ?>
 					</div>
-				</div>
 			</div>
 		<?php endif; ?>
 
