@@ -161,6 +161,92 @@
 			</div>
 		<?php endif; ?>
 
+		<?php if( get_field('include_featured_videos') ): ?>
+			<div class="wrap">
+
+
+			<div class="featured_videos">
+				<h3 class="section_title">
+					<span>featured videos</span>
+				</h3>
+				<div class="d-1of2 t-all m-all">
+						<div>
+							<?php
+							// get iframe HTML
+							$iframe = get_field('video_one');
+
+
+							// use preg_match to find iframe src
+							preg_match('/src="(.+?)"/', $iframe, $matches);
+							$src = $matches[1];
+
+
+							// add extra params to iframe src
+							$params = array(
+							'showinfo'    => 0,
+							'hd'        => 1,
+							'autohide'    => 1,
+							'rel' => 0
+							);
+
+							$new_src = add_query_arg($params, $src);
+
+							$iframe = str_replace($src, $new_src, $iframe);
+
+
+							// add extra attributes to iframe html
+							$attributes = 'showinfo=0';
+
+							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+							// echo $iframe
+							echo $iframe; ?>
+							<div class="video_title"><?php the_field('video_one_title'); ?></div>
+
+						</div>
+				</div>
+				<div class="d-1of2 t-all m-all">
+						<div>
+							<?php
+							// get iframe HTML
+							$iframe = get_field('video_two');
+
+
+							// use preg_match to find iframe src
+							preg_match('/src="(.+?)"/', $iframe, $matches);
+							$src = $matches[1];
+
+
+							// add extra params to iframe src
+							$params = array(
+							'showinfo'    => 0,
+							'hd'        => 1,
+							'autohide'    => 1,
+							'rel' => 0
+							);
+
+							$new_src = add_query_arg($params, $src);
+
+							$iframe = str_replace($src, $new_src, $iframe);
+
+
+							// add extra attributes to iframe html
+							$attributes = 'showinfo=0';
+
+							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+							// echo $iframe
+							echo $iframe; ?>
+							<div class="video_title"><?php the_field('video_two_title'); ?></div>
+
+						</div>
+				</div>
+			</div>
+			</div>
+		<?php endif; ?>
+
 			<?php if( get_field('dual_hero') ): ?>
 			<div class="dual_hero">
 				<div class="wrap">
