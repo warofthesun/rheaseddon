@@ -162,10 +162,10 @@
 		<?php endif; ?>
 
 		<?php if( get_field('include_featured_videos') ): ?>
-			<div class="wrap">
-
-
 			<div class="featured_videos">
+
+
+			<div class="wrap">
 				<h3 class="section_title">
 					<span>featured videos</span>
 				</h3>
