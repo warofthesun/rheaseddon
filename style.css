@@ -5,7 +5,7 @@
  Author: Dan Brown
  Author URI: thesplitpixel.com
  Template:     Evolution
- Version:      1.1.1
+ Version:      1.1.2
  License:      GNU General Public License v2 or later
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
@@ -678,7 +678,11 @@ img.article_image {
   .top_cta .article_text {
     text-align: center;
     max-width: 960px;
-    margin: 2.5em auto; }
+    margin: 2.5em auto;
+    line-height: 2em; }
+    .top_cta .article_text p {
+      line-height: 1.8em;
+      margin: 2em 0; }
   .featured_articles .article_text {
     color: #fff; }
 

@@ -117,7 +117,7 @@
 		<?php if( get_field('top_cta') ): ?>
 			<div class="top_cta">
 				<?php if( get_field('top_cta_text') ): ?>
-					<div class="article_text"><?php the_field('top_cta_text'); ?></div>
+					<div class="article_text" style="text-align:<?php the_field('align_text'); ?>"><?php the_field('top_cta_text'); ?></div>
 				<?php endif; ?>
 				<?php if( get_field('top_cta_button_link') ): ?>
 					<div style="text-align:center"><a href="<?php the_field('top_cta_button_link'); ?>" class="button"><?php the_field('top_cta_button_text'); ?></a></div>
