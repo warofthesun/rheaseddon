@@ -299,6 +299,6 @@
 	<?php endwhile; ?>
 	<?php wp_reset_postdata(); // reset the query ?>
 
-		<div id="main-area">
+		<div id="main-area__front">
 
 			<div class="container">

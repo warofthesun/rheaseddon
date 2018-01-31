@@ -307,6 +307,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .entry p {
   line-height: 1.5em !important; }
 
+#page-wrap {
+  float: left;
+  width: 100%; }
+
 .header_logo {
   position: relative;
   z-index: 99; }
@@ -413,8 +417,10 @@ a#mobile_nav {
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.home #main-area {
-  padding-top: 0px !important; }
+.home #main-area__front {
+  padding-top: 0px !important;
+  float: left;
+  width: 100%; }
 
 .home #content_area {
   border-top: 0px !important;
@@ -922,6 +928,8 @@ img.article_image {
   .hero_text {
     width: 80% !important;
     text-align: center !important; }
+  .image_overlay {
+    max-height: 600px; }
   #search-form {
     width: 30px;
     -webkit-transition: all .2s;
@@ -950,8 +958,7 @@ img.article_image {
     width: 1200px !important; }
   .container {
     width: 1020px !important; }
-  .home #main-area {
-    max-width: 1200px !important;
+  .home #main-area__front {
     margin: 0 auto; }
   .home #content_area {
     max-width: 1200px !important; }
