@@ -93,7 +93,7 @@
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
-		<?php $custom_query = new WP_Query('pagename=event-header');
+		<?php $custom_query = new WP_Query('pagename=event-options');
 		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'image-header' );?>
 
