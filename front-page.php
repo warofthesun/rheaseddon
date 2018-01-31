@@ -3,8 +3,6 @@
 <div id="content_area" class="clearfix fullwidth">
 
 	<div id="main_content">
-
-		<?php //get_template_part('loop','home'); ?>
 		<?php $custom_query = new WP_Query('pagename=home-options');
 		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		<?php if( get_field('quote_slider') ): ?>

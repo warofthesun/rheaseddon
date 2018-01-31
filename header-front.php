@@ -87,27 +87,24 @@
 					</nav>
 					<a href="#" id="mobile_nav" class="closed"><?php esc_html_e( 'Navigation', 'Evolution' ); ?><span></span></a>
 
-
-
 					<div id="bottom-menu-shadow"></div>
 				</div> <!-- end .container -->
 			</div> <!-- end #navigation -->
 		</header> <!-- end #main -->
-		<?php $custom_query = new WP_Query('pagename=home-options');
-		while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-		<?php if(get_field('select_header_type') == 'Image') : ?>
-			<?php
-				$attachment_id = get_field('hero_image');
-				$size = "image-header"; // (thumbnail, medium, large, full or custom size)
-				$image = wp_get_attachment_image_src( $attachment_id, $size );
-				// url = $image[0];
-				// width = $image[1];
-				// height = $image[2];
-			  ?>
+			<?php $custom_query = new WP_Query('pagename=home-options');
+			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+			<?php if(get_field('select_header_type') == 'Image') : ?>
+					<?php
+						$attachment_id = get_field('hero_image');
+						$size = "image-header"; // (thumbnail, medium, large, full or custom size)
+						$image = wp_get_attachment_image_src( $attachment_id, $size );
+						// url = $image[0];
+						// width = $image[1];
+						// height = $image[2];
+				  ?>
 
-
-			<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
-				<div class="image_overlay"></div>
+				<div class="image_header" style="background-image:url('<?php echo $image[0]; ?>')">
+					<div class="image_overlay"></div>
 					<div class="image_overlay_content">
 						<?php if( get_field('hero_headline') ): ?>
 							<h1 class="hero_title"><?php the_field('hero_headline'); ?></h1>
@@ -118,16 +115,14 @@
 						<?php if( get_field('hero_cta_link') ): ?>
 							<a href="<?php the_field('hero_cta_link'); ?>" class="button"><?php the_field('hero_cta_text'); ?></a>
 						<?php endif; ?>
-				</div>
+					</div>
 			</div>
 
-		<?php elseif(get_field('select_header_type') == 'Video') : ?>
+			<?php elseif(get_field('select_header_type') == 'Video') : ?>
 
-			<div class="video_header" style="position:relative;z-index:1;">
-				<div class="video_container">
-
-					<?php the_custom_header_markup(); ?>
-
+				<div class="video_header" style="position:relative;z-index:1;">
+					<div class="video_container">
+						<?php the_custom_header_markup(); ?>
 					</div>
 					<div class="video_overlay"></div>
 					<div class="video_overlay_content">
@@ -143,165 +138,164 @@
 					</div>
 			</div>
 
-
 			<?php else : ?>
 
 				<!--//do nothing-->
 
-		<?php endif;?>
+			<?php endif;?>
 
-		<?php if( get_field('top_cta') ): ?>
-			<div class="top_cta">
-				<?php if( get_field('top_cta_text') ): ?>
-					<div class="article_text" style="text-align:<?php the_field('align_text'); ?>"><?php the_field('top_cta_text'); ?></div>
-				<?php endif; ?>
-				<?php if( get_field('top_cta_button_link') ): ?>
-					<div style="text-align:center"><a href="<?php the_field('top_cta_button_link'); ?>" class="button"><?php the_field('top_cta_button_text'); ?></a></div>
-				<?php endif; ?>
-			</div>
-		<?php endif; ?>
-
-		<?php if( get_field('include_featured_videos') ): ?>
-			<div class="featured_videos">
-
-
-			<div class="wrap">
-				<h3 class="section_title">
-					<span>featured videos</span>
-				</h3>
-				<div class="d-1of2 t-all m-all">
-						<div>
-							<?php
-							// get iframe HTML
-							$iframe = get_field('video_one');
-
-
-							// use preg_match to find iframe src
-							preg_match('/src="(.+?)"/', $iframe, $matches);
-							$src = $matches[1];
-
-
-							// add extra params to iframe src
-							$params = array(
-							'showinfo'    => 0,
-							'hd'        => 1,
-							'autohide'    => 1,
-							'rel' => 0
-							);
-
-							$new_src = add_query_arg($params, $src);
-
-							$iframe = str_replace($src, $new_src, $iframe);
-
-
-							// add extra attributes to iframe html
-							$attributes = 'showinfo=0';
-
-							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-
-							// echo $iframe
-							echo $iframe; ?>
-							<div class="video_title"><?php the_field('video_one_title'); ?></div>
-
+			<?php if( get_field('top_cta') ): ?>
+				<div class="top_cta">
+					<?php if( get_field('top_cta_text') ): ?>
+						<div class="article_text" style="text-align:<?php the_field('align_text'); ?>">
+							<?php the_field('top_cta_text'); ?>
 						</div>
-				</div>
-				<div class="d-1of2 t-all m-all">
-						<div>
-							<?php
-							// get iframe HTML
-							$iframe = get_field('video_two');
-
-
-							// use preg_match to find iframe src
-							preg_match('/src="(.+?)"/', $iframe, $matches);
-							$src = $matches[1];
-
-
-							// add extra params to iframe src
-							$params = array(
-							'showinfo'    => 0,
-							'hd'        => 1,
-							'autohide'    => 1,
-							'rel' => 0
-							);
-
-							$new_src = add_query_arg($params, $src);
-
-							$iframe = str_replace($src, $new_src, $iframe);
-
-
-							// add extra attributes to iframe html
-							$attributes = 'showinfo=0';
-
-							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-
-							// echo $iframe
-							echo $iframe; ?>
-							<div class="video_title"><?php the_field('video_two_title'); ?></div>
-
+					<?php endif; ?>
+					<?php if( get_field('top_cta_button_link') ): ?>
+						<div style="text-align:center">
+							<a href="<?php the_field('top_cta_button_link'); ?>" class="button"><?php the_field('top_cta_button_text'); ?></a>
 						</div>
+					<?php endif; ?>
 				</div>
-			</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
+
+			<?php if( get_field('include_featured_videos') ): ?>
+				<div class="featured_videos">
+					<div class="wrap">
+						<h3 class="section_title">
+							<span>featured videos</span>
+						</h3>
+						<div class="d-1of2 t-all m-all">
+								<div>
+										<?php
+										// get iframe HTML
+										$iframe = get_field('video_one');
+
+
+										// use preg_match to find iframe src
+										preg_match('/src="(.+?)"/', $iframe, $matches);
+										$src = $matches[1];
+
+
+										// add extra params to iframe src
+										$params = array(
+										'showinfo'    => 0,
+										'hd'        => 1,
+										'autohide'    => 1,
+										'rel' => 0
+										);
+
+										$new_src = add_query_arg($params, $src);
+
+										$iframe = str_replace($src, $new_src, $iframe);
+
+
+										// add extra attributes to iframe html
+										// $attributes = 'showinfo=0';
+
+										$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+										// echo $iframe
+										echo $iframe; ?>
+									<div class="video_title"><?php the_field('video_one_title'); ?></div>
+
+								</div>
+						</div>
+						<div class="d-1of2 t-all m-all">
+								<div>
+										<?php
+										// get iframe HTML
+										$iframe = get_field('video_two');
+
+
+										// use preg_match to find iframe src
+										preg_match('/src="(.+?)"/', $iframe, $matches);
+										$src = $matches[1];
+
+
+										// add extra params to iframe src
+										$params = array(
+										'showinfo'    => 0,
+										'hd'        => 1,
+										'autohide'    => 1,
+										'rel' => 0
+										);
+
+										$new_src = add_query_arg($params, $src);
+
+										$iframe = str_replace($src, $new_src, $iframe);
+
+
+										// add extra attributes to iframe html
+										//$attributes = 'showinfo=0';
+
+										$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+										// echo $iframe
+										echo $iframe; ?>
+									<div class="video_title"><?php the_field('video_two_title'); ?></div>
+								</div>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
 
 			<?php if( get_field('dual_hero') ): ?>
-			<div class="dual_hero">
-				<div class="wrap">
-					<div>
-								<?php
-									$attachment_id = get_field('left_hero_image');
-									$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
-									$image = wp_get_attachment_image_src( $attachment_id, $size );
-									// url = $image[0];
-									// width = $image[1];
-									// height = $image[2];
-							  ?>
-								<div class="d-1of2 t-all m-all article" style="background-image:url('<?php echo $image[0]; ?>');">
-										<div class="overlay">
-												<?php if( get_field('hero_copy') ): ?>
-													<?php if( get_field('left_hero_title') ): ?>
-														<h3 class="article_title"><?php the_field('left_hero_title'); ?></h3>
+				<div class="dual_hero">
+					<div class="wrap">
+						<div>
+									<?php
+										$attachment_id = get_field('left_hero_image');
+										$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
+										$image = wp_get_attachment_image_src( $attachment_id, $size );
+										// url = $image[0];
+										// width = $image[1];
+										// height = $image[2];
+								  ?>
+									<div class="d-1of2 t-all m-all article" style="background-image:url('<?php echo $image[0]; ?>');">
+											<div class="overlay">
+													<?php if( get_field('hero_copy') ): ?>
+														<?php if( get_field('left_hero_title') ): ?>
+															<h3 class="article_title"><?php the_field('left_hero_title'); ?></h3>
+														<?php endif; ?>
+														<?php if( get_field('left_hero_copy') ): ?>
+															<div class="article_text"><?php the_field('left_hero_copy'); ?></div>
+														<?php endif; ?>
+														<?php if( get_field('left_hero_link') ): ?>
+															<a href="<?php the_field('left_hero_link'); ?>" class="button"><?php the_field('left_hero_cta'); ?></a>
+														<?php endif; ?>
 													<?php endif; ?>
-													<?php if( get_field('left_hero_copy') ): ?>
-														<div class="article_text"><?php the_field('left_hero_copy'); ?></div>
+											</div>
+									</div>
+									<?php
+										$attachment_id = get_field('right_hero_image');
+										$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
+										$image = wp_get_attachment_image_src( $attachment_id, $size );
+										// url = $image[0];
+										// width = $image[1];
+										// height = $image[2];
+								  ?>
+									<div class="d-1of2 t-all m-all last-col article" style="background-image:url('<?php echo $image[0]; ?>');">
+											<div class="overlay">
+													<?php if( get_field('hero_copy') ): ?>
+														<?php if( get_field('right_hero_title') ): ?>
+															<h3 class="article_title"><?php the_field('right_hero_title'); ?></h3>
+														<?php endif; ?>
+														<?php if( get_field('right_hero_copy') ): ?>
+															<div class="article_text"><?php the_field('right_hero_copy'); ?></div>
+														<?php endif; ?>
+														<?php if( get_field('right_hero_link') ): ?>
+															<a href="<?php the_field('right_hero_link'); ?>" class="button"><?php the_field('right_hero_cta'); ?></a>
+														<?php endif; ?>
 													<?php endif; ?>
-													<?php if( get_field('left_hero_link') ): ?>
-														<a href="<?php the_field('left_hero_link'); ?>" class="button"><?php the_field('left_hero_cta'); ?></a>
-													<?php endif; ?>
-												<?php endif; ?>
-										</div>
-								</div>
-								<?php
-									$attachment_id = get_field('right_hero_image');
-									$size = "article-thumb"; // (thumbnail, medium, large, full or custom size)
-									$image = wp_get_attachment_image_src( $attachment_id, $size );
-									// url = $image[0];
-									// width = $image[1];
-									// height = $image[2];
-							  ?>
-								<div class="d-1of2 t-all m-all last-col article" style="background-image:url('<?php echo $image[0]; ?>');">
-										<div class="overlay">
-												<?php if( get_field('hero_copy') ): ?>
-													<?php if( get_field('right_hero_title') ): ?>
-														<h3 class="article_title"><?php the_field('right_hero_title'); ?></h3>
-													<?php endif; ?>
-													<?php if( get_field('right_hero_copy') ): ?>
-														<div class="article_text"><?php the_field('right_hero_copy'); ?></div>
-													<?php endif; ?>
-													<?php if( get_field('right_hero_link') ): ?>
-														<a href="<?php the_field('right_hero_link'); ?>" class="button"><?php the_field('right_hero_cta'); ?></a>
-													<?php endif; ?>
-												<?php endif; ?>
-										</div>
-								</div>
-						</div>
-
+											</div>
+									</div>
+							</div>
+					</div>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
 	<?php endwhile; ?>
 	<?php wp_reset_postdata(); // reset the query ?>
 
