@@ -191,7 +191,7 @@
 
 
 										// add extra attributes to iframe html
-										// $attributes = 'showinfo=0';
+										 $attributes = 'showinfo=0';
 
 										$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
@@ -228,7 +228,7 @@
 
 
 										// add extra attributes to iframe html
-										//$attributes = 'showinfo=0';
+										$attributes = 'showinfo=0';
 
 										$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
