@@ -3,6 +3,15 @@
   width: 100%;
 }
 
+#main-area__front {
+  .container {
+    width: 90%;
+    max-width: 960px;
+  }
+}
+
+
+
 // Header
 .header_logo {
   position: relative;
@@ -173,9 +182,17 @@ body {
 }
 
 .featured_videos {
-  margin: 5em auto !important;
+  margin: 2em auto !important;
   float: left;
   width: 100%;
+
+  .video {
+    text-align: center;;
+  }
+
+  .video:first-of-type {
+    margin-bottom: 2.5em;
+  }
 }
 
 .video_overlay_content, .image_overlay_content {
@@ -245,7 +262,7 @@ h2 {
 .dual_hero {
     float: left;
     width: 100%;
-    padding: 5em 0;
+    padding: 1 0 2.5em 0;
     position: relative;
     z-index: 99;
 
@@ -253,6 +270,10 @@ h2 {
       background-repeat:no-repeat;
       background-size:cover;
       height:470px;
+
+      &:first-of-type {
+        margin-bottom: 5em;
+      }
 
       .overlay {
         display: flex;
@@ -347,6 +368,10 @@ h2 {
 
 .about_dr_seddon {
     margin: 5em 0;
+
+    .last-col {
+      margin-bottom: 5em;
+    }
 
 
     .article_content {

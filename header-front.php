@@ -165,7 +165,7 @@
 						<h3 class="section_title">
 							<span>featured videos</span>
 						</h3>
-						<div class="d-1of2 t-all m-all">
+						<div class="d-1of2 t-all m-all video">
 								<div>
 										<?php
 										// get iframe HTML
@@ -202,7 +202,7 @@
 
 								</div>
 						</div>
-						<div class="d-1of2 t-all m-all">
+						<div class="d-1of2 t-all m-all video">
 								<div>
 										<?php
 										// get iframe HTML
