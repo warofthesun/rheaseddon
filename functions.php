@@ -71,6 +71,8 @@ function google_fonts() {
 
 add_action('wp_enqueue_scripts', 'google_fonts');
 
+
+
 /**
  * Register the required plugins for this theme.
  *

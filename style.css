@@ -5,7 +5,7 @@
  Author: Dan Brown
  Author URI: thesplitpixel.com
  Template:     Evolution
- Version:      1.1.6
+ Version:      1.1.7
  License:      GNU General Public License v2 or later
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
@@ -90,7 +90,7 @@ them however you see fit.
   .m-2of3 {
     float: left;
     margin-right: 0.75em;
-    width: 66.66%; }
+    width: 65.66%; }
   .m-1of4 {
     float: left;
     margin-right: 0.75em;
@@ -162,7 +162,7 @@ them however you see fit.
   .d-2of3 {
     float: left;
     margin-right: 0.75em;
-    width: 66.66%; }
+    width: 65.66%; }
   .d-1of4 {
     float: left;
     margin-right: 0.75em;
@@ -462,13 +462,39 @@ body {
   position: relative;
   z-index: 3; }
 
-h2.speaking_topic {
+h2.speaking_topic, h2.press_section {
   margin-top: -.5em;
   margin-bottom: .5em;
   padding-bottom: .5em;
   border-bottom: 1px solid #00CCFF;
   font-weight: 100;
   letter-spacing: 1px; }
+
+h2.press_section {
+  margin-top: 1em; }
+
+ul.press_tv, ul.press_radio, ul.press_print, ul.press_book_reviews {
+  margin-left: 0;
+  padding-left: 0 !important; }
+  ul.press_tv li, ul.press_radio li, ul.press_print li, ul.press_book_reviews li {
+    list-style: none;
+    font-size: 1.2em;
+    margin-bottom: 1.5em; }
+    ul.press_tv li:before, ul.press_radio li:before, ul.press_print li:before, ul.press_book_reviews li:before {
+      font-family: "fontawesome";
+      color: #00CCFF; }
+
+ul.press_tv li:before {
+  content: "\f26c"; }
+
+ul.press_radio li:before {
+  content: "\f028"; }
+
+ul.press_print li:before {
+  content: "\f1ea"; }
+
+ul.press_book_reviews li:before {
+  content: "\f02d"; }
 
 .contact .speaking_topics .speaking_topic {
   float: left;

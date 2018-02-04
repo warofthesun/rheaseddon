@@ -201,7 +201,7 @@ body {
 }
 
 h2 {
-  &.speaking_topic {
+  &.speaking_topic, &.press_section {
     margin-top: -.5em;
     margin-bottom: .5em;
     padding-bottom: .5em;
@@ -209,7 +209,59 @@ h2 {
     font-weight: 100;
     letter-spacing: 1px;
   }
+
+  &.press_section {
+    margin-top: 1em;
+  }
 }
+
+ul.press_tv, ul.press_radio, ul.press_print, ul.press_book_reviews {
+  margin-left: 0;
+  padding-left: 0 !important;
+    li {
+      list-style: none;
+      font-size: 1.2em;
+      margin-bottom:1.5em;
+
+      &:before {
+        font-family: "fontawesome";
+        color: $accent;
+      }
+    }
+  }
+
+  ul.press_tv {
+    li {
+      &:before {
+        content: "\f26c";
+      }
+    }
+  }
+
+  ul.press_radio {
+    li {
+      &:before {
+        content: "\f028";
+      }
+    }
+  }
+
+  ul.press_print {
+    li {
+      &:before {
+        content: "\f1ea";
+      }
+    }
+  }
+
+  ul.press_book_reviews {
+    li {
+      &:before {
+        content: "\f02d";
+      }
+    }
+  }
+
 .contact {
   .speaking_topics {
     .speaking_topic {
