@@ -43,7 +43,6 @@ button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce bu
   min-width: 200px;
   box-shadow: 1px 1px 0 $dark-accent !important, 2px 2px 0 $darker-accent !important;
 
-
   &:hover {
     text-shadow: -1px -1px 1px $dark-accent;
     box-shadow: 1px 1px 0 $darker-accent;
@@ -57,6 +56,14 @@ button, .button, .readmore span, .woocommerce button.button.alt, .woocommerce bu
     box-shadow: -1px -1px 0 $dark-accent, -2px -2px 0 $darker-accent;
   }
 }
+
+.epk {
+  .button {
+    display: block;
+    margin: 1em 0;
+  }
+}
+
 
 .wpcf7-submit {
   max-width: 200px;

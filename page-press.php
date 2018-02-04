@@ -12,7 +12,6 @@ Template Name: Press Page
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article class="post clearfix">
 
-
 				<?php
 
 					// check if the flexible content field has rows of data
@@ -193,10 +192,46 @@ Template Name: Press Page
 			</article> <!-- end .entry -->
 
 	</div> <!-- end #main_content -->
-	<div class="d-1of3 t-1of3 m-all last-col">
+		<div class="d-1of3 t-1of3 m-all last-col">
+
+			<?php
+					$attachment_id = get_field('press_sidebar_image');
+					$size = "large"; // (thumbnail, medium, large, full or custom size)
+					$image = wp_get_attachment_image_src( $attachment_id, $size );
+					// url = $image[0];
+					// width = $image[1];
+					// height = $image[2];
+			?>
+			<div>
+				<img class="article_image" alt="Image of <?php the_title(); ?>" src="<?php echo $image[0]; ?>" />
+			</div>
+
+			<?php if( get_field('press_sidebar_epk') ): ?>
+
+			<div style="text-align:center" class="epk">
+				<a href="/<?php the_field('press_sidebar_epk_link'); ?>" class="button"><?php the_field('press_sidebar_epk'); ?></a>
+			</div>
+			<div>
+				<?php if( have_rows('past_appearances') ): ?>
+					<h2 class="press_section">Past Appearances</h2>
+					<ul class="past_appearances">
+						<?php
+								while ( have_rows('past_appearances') ) : the_row(); ?>
+								<li>
+									<?php the_sub_field('past_appearance'); ?>
+								</li>
+							<?php endwhile; ?>
+					</ul>
+
+				<?php endif; ?>
+			</div>
+
+	<?php endif; ?>
+
+<?php endwhile; ?>
 
 
-		<?php endwhile; // end of the loop. ?>
+
 
 	</div>
 </div> <!-- end #content_area -->
