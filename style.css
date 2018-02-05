@@ -478,16 +478,16 @@ h2.press_section {
   margin-top: 1em;
   width: 80%; }
 
-ul.press_tv, ul.press_radio, ul.press_print, ul.press_book_reviews {
+ul.press_tv, ul.press_radio, ul.press_print, ul.press_book_reviews, ul.press_awards {
   margin-left: 0;
   padding-left: 0 !important;
   width: 80%; }
-  ul.press_tv li, ul.press_radio li, ul.press_print li, ul.press_book_reviews li {
+  ul.press_tv li, ul.press_radio li, ul.press_print li, ul.press_book_reviews li, ul.press_awards li {
     list-style: none;
     font-size: 1.2em;
     margin-bottom: 1.5em;
     margin-left: 2em; }
-    ul.press_tv li:before, ul.press_radio li:before, ul.press_print li:before, ul.press_book_reviews li:before {
+    ul.press_tv li:before, ul.press_radio li:before, ul.press_print li:before, ul.press_book_reviews li:before, ul.press_awards li:before {
       font-family: "fontawesome";
       color: #00CCFF;
       margin-left: -2em;
@@ -504,6 +504,9 @@ ul.press_print li:before {
 
 ul.press_book_reviews li:before {
   content: "\f02d"; }
+
+ul.press_awards li:before {
+  content: "\f091"; }
 
 .past_appearances li {
   margin: 1em 0 0 1em; }

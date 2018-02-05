@@ -144,20 +144,18 @@ Template Name: Press Page
 																						 // no rows found
 
 																					 endif; ?>
-
-																				 <?php elseif( get_row_layout() == 'content_area' ): ?>
-																					 <h2 class="press_section"><?php the_sub_field('press_content_area_title'); ?></h2>
-																					 <?php the_sub_field('press_content_area'); ?>
+																				 <?php elseif( get_row_layout() == 'awards' ): ?>
+																					 <h2 class="press_section">Awards</h2>
 
 																					 <?php
 																						//create a repeater loop
 																								 // check if the repeater field has rows of data
-																									if( have_rows('press_book_reviews') ):
+																									if( have_rows('press_awards') ):
 
 																								// loop through the rows of data ?>
-																								<ul class="press_book_reviews">
+																								<ul class="press_awards">
 																									<?php
-																											while ( have_rows('press_book_reviews') ) : the_row(); ?>
+																											while ( have_rows('press_awards') ) : the_row(); ?>
 																											<li>
 																												<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
 																											</li>
@@ -175,7 +173,13 @@ Template Name: Press Page
 
 																									 // no rows found
 
-																								 endif;
+																								 endif; ?>
+
+																				 <?php elseif( get_row_layout() == 'content_area' ): ?>
+																					 <h2 class="press_section"><?php the_sub_field('press_content_area_title'); ?></h2>
+																					 <?php the_sub_field('press_content_area'); ?>
+
+																					<?php
 
 																								endif;
 
@@ -227,7 +231,7 @@ Template Name: Press Page
 				<?php endif; ?>
 			</div>
 
-	
+
 
 <?php endwhile; ?>
 
