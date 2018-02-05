@@ -96,7 +96,7 @@ Template Name: Press Page
 																			<?php
 																					while ( have_rows('press_print') ) : the_row(); ?>
 																					<li>
-																						<?php the_sub_field('press_item'); ?>: <a href="http://<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																						<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
 																					</li>
 
 																				 <?php
@@ -127,7 +127,7 @@ Template Name: Press Page
 																						<?php
 																								while ( have_rows('press_book_reviews') ) : the_row(); ?>
 																								<li>
-																									<?php the_sub_field('press_item'); ?>: <a href="http://<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																									<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
 																								</li>
 
 																							 <?php
@@ -159,7 +159,7 @@ Template Name: Press Page
 																									<?php
 																											while ( have_rows('press_book_reviews') ) : the_row(); ?>
 																											<li>
-																												<?php the_sub_field('press_item'); ?>: <a href="http://<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																												<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
 																											</li>
 
 																										 <?php
@@ -212,6 +212,7 @@ Template Name: Press Page
 				<a href="/<?php the_field('press_sidebar_epk_link'); ?>" class="button"><?php the_field('press_sidebar_epk'); ?></a>
 			</div>
 			<div>
+				<?php endif; ?>
 				<?php if( have_rows('past_appearances') ): ?>
 					<h2 class="press_section">Past Appearances</h2>
 					<ul class="past_appearances">
@@ -226,7 +227,7 @@ Template Name: Press Page
 				<?php endif; ?>
 			</div>
 
-	<?php endif; ?>
+	
 
 <?php endwhile; ?>
 
