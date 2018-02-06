@@ -36,7 +36,7 @@ Template Name: Press Page
 													<?php
 															while ( have_rows('press_tv') ) : the_row(); ?>
 															<li>
-																<?php the_sub_field('press_item'); ?>: <a href="http://<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																<?php the_sub_field('press_item'); ?><?php if( get_sub_field('press_item_link')): ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a><?php endif; ?>
 															</li>
 
 														 <?php
@@ -64,9 +64,9 @@ Template Name: Press Page
 			 												<ul class="press_radio">
 			 													<?php
 			 															while ( have_rows('press_radio') ) : the_row(); ?>
-			 															<li>
-			 																<?php the_sub_field('press_item'); ?>: <a href="http://<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
-			 															</li>
+																		<li>
+																			<?php the_sub_field('press_item'); ?><?php if( get_sub_field('press_item_link')): ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a><?php endif; ?>
+																		</li>
 
 			 														 <?php
 
@@ -96,7 +96,7 @@ Template Name: Press Page
 																			<?php
 																					while ( have_rows('press_print') ) : the_row(); ?>
 																					<li>
-																						<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																						<?php the_sub_field('press_item'); ?><?php if( get_sub_field('press_item_link')): ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a><?php endif; ?>
 																					</li>
 
 																				 <?php
@@ -127,7 +127,7 @@ Template Name: Press Page
 																						<?php
 																								while ( have_rows('press_book_reviews') ) : the_row(); ?>
 																								<li>
-																									<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
+																									<?php the_sub_field('press_item'); ?><?php if( get_sub_field('press_item_link')): ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a><?php endif; ?>
 																								</li>
 
 																							 <?php
@@ -148,32 +148,29 @@ Template Name: Press Page
 																					 <h2 class="press_section">Awards</h2>
 
 																					 <?php
-																						//create a repeater loop
-																								 // check if the repeater field has rows of data
-																									if( have_rows('press_awards') ):
 
-																								// loop through the rows of data ?>
+																	 					// check if the flexible content field has rows of data
+																	 					if( have_rows('awards_section') ):
+
+																						while ( have_rows('awards_section') ) : the_row();
+																								if( get_row_layout() == 'year_grouping' ): ?>
+																								<div class="year_grouping">
+
+																								<?php the_sub_field('year'); ?>
 																								<ul class="press_awards">
-																									<?php
-																											while ( have_rows('press_awards') ) : the_row(); ?>
-																											<li>
-																												<?php the_sub_field('press_item'); ?>: <a href="<?php the_sub_field('press_item_url'); ?>" target="_blank"><?php the_sub_field('press_item_link'); ?></a>
-																											</li>
-
-																										 <?php
-
-																									 endwhile;
-																							 ?>
-																								 </ul>
 
 
-																									 <?php
+																								<?php while ( have_rows('awards') ) : the_row(); ?>
+																									<li>
+																										<?php the_sub_field('award'); ?><?php if( get_sub_field('award_link')): ?>: <a href="<?php the_sub_field('award_url'); ?>" target="_blank"><?php the_sub_field('award_link'); ?></a><?php endif; ?>
+																									</li>
 
-																									else :
+																					<?php endwhile; ?>
+																					</ul>
+																					</div>
+																					<?php endif; endwhile; endif;?>
 
-																									 // no rows found
 
-																								 endif; ?>
 
 																				 <?php elseif( get_row_layout() == 'content_area' ): ?>
 																					 <h2 class="press_section"><?php the_sub_field('press_content_area_title'); ?></h2>
