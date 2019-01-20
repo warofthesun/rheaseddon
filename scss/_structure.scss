@@ -162,6 +162,20 @@ body {
     }
 }
 
+.entry {
+  h1, h2, h3 {
+    font-style: normal !important;
+  }
+
+  h1, h2 {
+    font-weight: 100;
+  }
+
+  h2, h3 {
+    margin-bottom: .5em;
+  }
+}
+
 .video_overlay {
   position: absolute;
   width: 100%;
@@ -275,11 +289,23 @@ ul.press_tv, ul.press_radio, ul.press_print, ul.press_book_reviews, ul.press_awa
     }
   }
 
-
+  ul.past_appearances {
+    li {
+      &:before {
+        content: "\f111";
+        font-family: "fontawesome";
+        font-size: .5em;
+        color: $accent;
+        margin-left: -2em;
+        margin-right: .5em;
+      }
+    }
+  }
 
 .past_appearances {
   li {
     margin: 1em 0 0 1em;
+    line-height: 1.2em;
   }
 }
 

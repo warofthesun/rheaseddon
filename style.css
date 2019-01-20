@@ -5,7 +5,7 @@
  Author: Dan Brown
  Author URI: thesplitpixel.com
  Template:     Evolution
- Version:      1.2.1
+ Version:      1.2.2
  License:      GNU General Public License v2 or later
  GitHub Theme URI: https://github.com/warofthesun/rheaseddon
  Text Domain:  Evolution-child
@@ -273,40 +273,45 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   .events-list .tribe-events-loop .tribe-events-event-image, .tribe-events-list .tribe-events-loop .tribe-events-event-image {
     width: 100% !important; }
 
-.events {
-  height: 400px; }
-  .events .article_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-    height: 100%; }
-  .events .event_title {
-    font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-decoration: none; }
-  .events .event_location {
-    font-size: 2.5em;
-    font-style: normal;
-    font-weight: 100; }
-  .events .event_date {
-    color: #00CCFF;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid #00CCFF;
-    text-decoration: none; }
+@media only screen and (min-width: 768px) {
+  .events {
+    height: 400px; } }
+
+.events .article_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  height: 100%; }
+
+.events .event_title {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none; }
+
+.events .event_location {
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 100; }
+
+.events .event_date {
+  color: #00CCFF;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #00CCFF;
+  text-decoration: none; }
 
 .entry p {
   line-height: 1.5em !important; }
@@ -437,6 +442,15 @@ body {
 .home .entry {
   border-bottom: 0px; }
 
+.entry h1, .entry h2, .entry h3 {
+  font-style: normal !important; }
+
+.entry h1, .entry h2 {
+  font-weight: 100; }
+
+.entry h2, .entry h3 {
+  margin-bottom: .5em; }
+
 .video_overlay {
   position: absolute;
   width: 100%;
@@ -508,8 +522,17 @@ ul.press_book_reviews li:before {
 ul.press_awards li:before {
   content: "\f091"; }
 
+ul.past_appearances li:before {
+  content: "\f111";
+  font-family: "fontawesome";
+  font-size: .5em;
+  color: #00CCFF;
+  margin-left: -2em;
+  margin-right: .5em; }
+
 .past_appearances li {
-  margin: 1em 0 0 1em; }
+  margin: 1em 0 0 1em;
+  line-height: 1.2em; }
 
 .contact .speaking_topics .speaking_topic {
   float: left;
