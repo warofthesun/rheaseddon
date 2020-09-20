@@ -78,7 +78,7 @@ add_action('wp_enqueue_scripts', 'google_fonts');
  *
  */
 
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+//add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 
 function my_theme_register_required_plugins() {
 
